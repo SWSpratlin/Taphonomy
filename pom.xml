@@ -23,25 +23,31 @@
             <systemPath>${project.basedir}/lib/core.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>io.github.eduramiba</groupId>
+            <artifactId>webcam-capture-driver-native</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/webcam-capture-driver-native-1.0.0.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>com.github.sarxos</groupId>
             <artifactId>webcam-capture</artifactId>
             <version>0.3.12</version>
         </dependency>
         <dependency>
-            <groupId>com.nativelibs4java</groupId>
-            <artifactId>bridj</artifactId>
-            <version>0.7.0</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>dx</artifactId>
-                    <groupId>com.google.android.tools</groupId>
-                </exclusion>
-            </exclusions>
+            <groupId>com.sun</groupId>
+            <artifactId>jna</artifactId>
+            <version>5.13.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jna-5.13.0.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.5.10</version>
+            <groupId>com.sun</groupId>
+            <artifactId>jna-platform</artifactId>
+            <version>5.13.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jna-platform-5.13.0.jar</systemPath>
         </dependency>
+
     </dependencies>
 </project>
