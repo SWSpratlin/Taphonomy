@@ -23,7 +23,7 @@ public class Main extends PApplet{
         size(1280, 720);
         utils = new Utils();
         System.out.println(utils.sysInfo());
-        handler = new CamHandler(utils);
+        handler = new CamHandler(utils, width);
         CamHandler.initCam();
 
         int w = CamHandler.cam.getViewSize().width;
@@ -62,10 +62,15 @@ public class Main extends PApplet{
         }
 
         image(a, 0, 0);
-        int[] holder = new int[max];
-        handler.getMirroredImage(holder);
+//        int[] holder = new int[max];
+//        handler.getMirroredImage(holder);
+//        for (int i = 0; i < a.pixels.length; i++) {
+//            if(holder[i] == -1){
+//                a.pixels[i] = 0x00000000;
+//            }
+//        }
         for (int i = 0; i < a.pixels.length; i++) {
-            if(holder[i] == -1){
+            if (handler.newFlip(coords.get(i)) == -1){
                 a.pixels[i] = 0x00000000;
             }
         }
@@ -87,5 +92,4 @@ public class Main extends PApplet{
         rot.test.Main main = new rot.test.Main();
         PApplet.runSketch(processingArgs, main);
     }
-
 }

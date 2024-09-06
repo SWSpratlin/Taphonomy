@@ -13,10 +13,17 @@ public class CamHandler {
 
     public static String os;
     public static Webcam cam;
+    public int[] width;
 
-    public CamHandler(Utils u) {
+    public CamHandler(Utils u, int w) {
         os = u.sysInfo();
         initDriver();
+        int j =0;
+        width = new int[w];
+        for (int i = w-1; i >= 0 ; i--) {
+            width[j] = i;
+            j++;
+        }
     }
 
 
@@ -29,6 +36,9 @@ public class CamHandler {
         if (sys.contains("silicon")) {
             Webcam.setDriver(new NativeDriver());
             System.out.println("Silicon Driver loaded");
+        }else if (sys.contains("intel")){
+            System.out.println("We got to the driver loader");
+            Webcam.setDriver(new NativeDriver());
         } else if (sys.contains("pi")) {
             try{
                 //Webcam.setDriver();
@@ -38,7 +48,10 @@ public class CamHandler {
             }
         } else if (sys.contains("windows")) {
             System.out.println("I'm still working on this one, sorry");
-        } else throw new IllegalArgumentException("No Compatible OS to load Driver");
+        } else {
+            System.out.println(sys);
+            throw new IllegalArgumentException("No Compatible Architecture to load Driver");
+        }
     }
 
     /**
@@ -47,7 +60,7 @@ public class CamHandler {
      * @throws IllegalArgumentException Either there is no webcam, or no Compatible OS (Apple or Pi)
      */
     public static void initCam() throws IllegalArgumentException {
-        if (os.toLowerCase().contains("silicon")) {
+        if (os.toLowerCase().contains("silicon")|| os.toLowerCase().contains("intel")) {
             for (int i = 0; i < Webcam.getWebcams().size(); i++) {
                 System.out.println(i + ": " + Webcam.getWebcams().get(i).getName());
             }
@@ -103,5 +116,19 @@ public class CamHandler {
             flipped.getRGB(0,0,image.getWidth(), image.getHeight(), output, 0, image.getWidth());
             return output;
         } else throw new WebcamException("Webcam Cannot be Null");
+    }
+
+    /**
+     * In progress method to return flipped Image data to the Main method.
+     * @param p the point that is currently being examined
+     * @return the horizontally flipped point fromt the camera image
+     * @throws WebcamException if no webcam is connected (how did you get this far)
+     */
+    public int newFlip(Point p) throws WebcamException{
+        if (cam != null){
+            BufferedImage image = cam.getImage();
+            return image.getRGB(width[p.x], p.y);
+        }
+        else throw new WebcamException("Webcam Cannot be Null");
     }
 }

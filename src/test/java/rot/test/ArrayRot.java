@@ -166,7 +166,7 @@ public class ArrayRot {
         hexArray = Collections.unmodifiableList(hexArray);
         System.out.println("HexArray Loaded");
 
-        System.out.println("Map1: " + Integer.toHexString(mapImg.pixels[0]) + " Map2: " + Integer.toHexString(mapImg.pixels[1]));
+        System.out.println("Map1: " + Integer.toHexString(mapImg.pixels[0]) + " Map2: " + Integer.toHexString(mapImg.pixels[1]) + " Walked 3: " + Integer.toHexString(img.pixels[2]));
 
         pXp = new int[max];
         updater = new boolean[max];
