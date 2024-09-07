@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 //imported objects
 import static rot.test.Main.max;
-import static rot.test.Main.coords;
+//import static rot.test.Main.coords;
 
 //Class start
 public class CamHandler {
@@ -20,24 +20,24 @@ public class CamHandler {
     //Global Class Objects
     public static String os;
     public static Webcam cam;
-    public int[] width;
+    public int[] flip;
 
     /**
      * Constructor, takes 2 arguments
      * @param u Utils object. Should be initialized in Main class
      * @param w Width of the camera image being handled
+     * @param h Height of the camera image being handled
      */
-    public CamHandler(Utils u, int w) {
+    public CamHandler(Utils u, int w, int h) {
         os = u.sysInfo();
         initDriver();
         int j =0;
 
         // Creates an array that stores the reverse values of a single Width
-        width = new int[w];
-        for (int i = w-1; i >= 0 ; i--) {
-            width[j] = i;
-            j++;
-        }
+        flip = new int[w*h];
+        System.out.println(flip.length);
+        Utils.flipImageArray(w, h, flip);
+        System.out.println(flip.length);
     }
 
 
@@ -55,7 +55,7 @@ public class CamHandler {
             Webcam.setDriver(new NativeDriver());
         } else if (sys.contains("pi")) {
             try{
-                //Webcam.setDriver();
+                Webcam.setDriver(new NativeDriver());
                 System.out.println("Pi Driver loaded");
             } catch (IllegalArgumentException e) {
                 System.err.println("Pi Driver could not be loaded");
@@ -138,13 +138,6 @@ public class CamHandler {
      * @return the horizontally flipped point fromt the camera image
      * @throws WebcamException if no webcam is connected (how did you get this far)
      */
-    public int newFlip(Point p) throws WebcamException{
-        if (cam != null){
-            BufferedImage image = cam.getImage();
-            return image.getRGB(width[p.x], p.y);
-        }
-        else throw new WebcamException("Webcam Cannot be Null");
-    }
 
     public int[] camFlipper(int[] output) throws WebcamException {
         if (cam != null){
@@ -152,10 +145,12 @@ public class CamHandler {
             BufferedImage image = cam.getImage();
             for (int i = 0; i < image.getHeight(); i++) {
                 for (int j = 0; j < image.getWidth(); j++) {
-                    output[j + (i * image.getWidth())] = image.getRGB(j, i);
+                    output[flip[j + (i * image.getWidth())]] = image.getRGB(j, i);
                 }
             }
             return output;
         } else throw new WebcamException("Webcam Cannot be Null");
     }
+
+
 }

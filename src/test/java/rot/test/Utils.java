@@ -1,5 +1,8 @@
 package rot.test;
 
+import java.awt.*;
+import java.util.HashMap;
+
 public class Utils {
 
     private static final long MEGABYTE = 1024L * 1024L;
@@ -8,7 +11,7 @@ public class Utils {
     public static String osName;
     public static String osArch;
 
-    public Utils(){
+    public Utils() {
         runtime = Runtime.getRuntime();
         opacityArray();
     }
@@ -16,20 +19,21 @@ public class Utils {
     /**
      * Working on this to detect the system information (mostly OS and Architecture)
      * Used mostly for camera handling purposes.
+     *
      * @return String that gives the OS name, and Chip architecture (silicon vs Intel).
      */
-    public String sysInfo(){
+    public String sysInfo() {
 
         osName = System.getProperty("os.name");
         osArch = System.getProperty("os.arch");
 
-        if(osName.toLowerCase().contains("mac") && osArch.toLowerCase().contains("aarch64")){
+        if (osName.toLowerCase().contains("mac") && osArch.toLowerCase().contains("aarch64")) {
             return "Mac Silicon";
-        } else if(osName.toLowerCase().contains("mac") && !osArch.toLowerCase().contains("aarch64")){
+        } else if (osName.toLowerCase().contains("mac") && !osArch.toLowerCase().contains("aarch64")) {
             return "Mac Intel";
-        } else if (osName.toLowerCase().contains("linux") && osArch.toLowerCase().contains("aarch64")){
+        } else if (osName.toLowerCase().contains("linux") && osArch.toLowerCase().contains("aarch64")) {
             return "Linux / Pi";
-        } else if (osName.toLowerCase().contains("windows")){
+        } else if (osName.toLowerCase().contains("windows")) {
             return "Windows";
         }
         return "No Compatible OS";
@@ -38,10 +42,11 @@ public class Utils {
     /**
      * Utility to easily log memory usage for sketches. Not necessary for deployment,
      * but helpful for optimization.
+     *
      * @param frameCount usually "frameCount" if used in a Processing sketch. Whatever frame counter/refresh counter you have
-     * @param increment how often you want to update
+     * @param increment  how often you want to update
      */
-    public void printMemory(int frameCount, int increment){
+    public void printMemory(int frameCount, int increment) {
         if (frameCount % increment == 0) {
             long memory = runtime.totalMemory() - runtime.freeMemory();
             System.out.println("Used memory in bytes: " + memory);
@@ -70,7 +75,7 @@ public class Utils {
         opacity[94] = "F0";
         opacity[93] = "ED";
         opacity[92] = "EB";
-        opacity[91]= "E8";
+        opacity[91] = "E8";
         opacity[90] = "E6";
         opacity[89] = "E3";
         opacity[88] = "E0";
@@ -164,8 +169,30 @@ public class Utils {
         opacity[0] = "00";
     }
 
-    public static int convertToAlphaHex(int alpha, int i){
+    public static int convertToAlphaHex(int alpha, int i) {
         String hex = "0x" + opacity[alpha] + Integer.toHexString(i);
         return Integer.parseInt(hex, 16);
+    }
+
+    public static int[] flipImageArray(int w, int h, int[] output) {
+        int i = 0;
+        for (int y = 0; y < h; y++) {
+            for (int x = w - 1; x >= 0; x--) {
+                output[i] = x + (y * w);
+                i++;
+            }
+        }
+        return output;
+    }
+
+    public static HashMap coordArray(int w, int h) {
+        HashMap<Integer, Point> coords = new HashMap<Integer, Point>(w * h);
+        for (int y = 0; y < h; y++) {
+            for (int x = 0; x < w; x++) {
+                int i = x + (y * w);
+                coords.put(i, (new Point(x, y)));
+            }
+        }
+        return coords;
     }
 }

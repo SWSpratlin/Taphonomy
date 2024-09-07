@@ -14,7 +14,6 @@ public class Main extends PApplet{
     public static PImage map;
     public static Utils utils;
     public static CamHandler handler;
-    public static HashMap<Integer, Point> coords;
     public static ArrayRot rot;
     public int d = 5;
     public static int max;
@@ -24,7 +23,8 @@ public class Main extends PApplet{
         size(1280, 720);
         utils = new Utils();
         System.out.println(utils.sysInfo());
-        handler = new CamHandler(utils, width);
+        System.out.println("max: " + width * height);
+        handler = new CamHandler(utils, width, height);
         CamHandler.initCam();
 
         int w = CamHandler.cam.getViewSize().width;
@@ -32,6 +32,7 @@ public class Main extends PApplet{
         a = createImage(w, h, ARGB);
         a.loadPixels();
         max = a .pixels.length;
+        System.out.println(max);
         Arrays.fill(a.pixels, 0xFF000000);
 
         bg = loadImage("data/bg.jpg");
@@ -41,18 +42,10 @@ public class Main extends PApplet{
         rot = new ArrayRot(this, a, map);
         rot.drawMap();
 
-        coords = new HashMap<Integer, Point>(width*height);
-        for (int y = 0; y < height; y++) {
-            for (int x = 0; x < width; x++) {
-                int i = x + y * width;
-                coords.put(i, (new Point(x,y)));
-            }
-        }
         int i = (int)random((width*height) -1);
         //Debug Print Statements
         System.out.println("Cam: " + CamHandler.cam.getName());
         System.out.println("Cam Size: " + CamHandler.cam.getViewSize().width + ", " + CamHandler.cam.getViewSize().height);
-        System.out.println("Map Populated: " + coords.size() + ", Sample: " + coords.get(i));
 
         temp = new int[max];
     }
@@ -60,28 +53,16 @@ public class Main extends PApplet{
     public void draw(){
         image(bg,0,0);
 
-//        if(frameCount % d == 0){
-//            rot.grow();
-//        }
+        if(frameCount % d == 0){
+            rot.grow();
+        }
 
         image(a, 0, 0);
-//        int[] holder = new int[max];
-//        handler.getMirroredImage(holder);
-//        for (int i = 0; i < a.pixels.length; i++) {
-//            if(holder[i] == -1){
-//                a.pixels[i] = 0x00000000;
-//            }
-//        }
-//        for (int i = 0; i < a.pixels.length; i++) {
-//            if (handler.newFlip(coords.get(i)) == -1){
-//                a.pixels[i] = 0x00000000;
-//            }
-//        }
-
-
         handler.camFlipper(temp);
         for (int i = 0; i < max; i++) {
-            a.pixels[i] = temp[i];
+            if(temp[i] == -1){
+                a.pixels[i] = 0x00000000;
+            }
         }
         a.updatePixels();
 
