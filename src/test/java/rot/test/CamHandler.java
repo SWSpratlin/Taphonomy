@@ -1,5 +1,6 @@
 package rot.test;
 
+//imported classes
 import com.github.eduramiba.webcamcapture.drivers.NativeDriver;
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamException;
@@ -9,16 +10,29 @@ import java.awt.image.BufferedImage;
 import java.awt.geom.AffineTransform;
 import java.util.Scanner;
 
+//imported objects
+import static rot.test.Main.max;
+import static rot.test.Main.coords;
+
+//Class start
 public class CamHandler {
 
+    //Global Class Objects
     public static String os;
     public static Webcam cam;
     public int[] width;
 
+    /**
+     * Constructor, takes 2 arguments
+     * @param u Utils object. Should be initialized in Main class
+     * @param w Width of the camera image being handled
+     */
     public CamHandler(Utils u, int w) {
         os = u.sysInfo();
         initDriver();
         int j =0;
+
+        // Creates an array that stores the reverse values of a single Width
         width = new int[w];
         for (int i = w-1; i >= 0 ; i--) {
             width[j] = i;
@@ -130,5 +144,18 @@ public class CamHandler {
             return image.getRGB(width[p.x], p.y);
         }
         else throw new WebcamException("Webcam Cannot be Null");
+    }
+
+    public int[] camFlipper(int[] output) throws WebcamException {
+        if (cam != null){
+
+            BufferedImage image = cam.getImage();
+            for (int i = 0; i < image.getHeight(); i++) {
+                for (int j = 0; j < image.getWidth(); j++) {
+                    output[j + (i * image.getWidth())] = image.getRGB(j, i);
+                }
+            }
+            return output;
+        } else throw new WebcamException("Webcam Cannot be Null");
     }
 }

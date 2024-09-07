@@ -18,6 +18,7 @@ public class Main extends PApplet{
     public static ArrayRot rot;
     public int d = 5;
     public static int max;
+    public static int[] temp;
 
     public void settings(){
         size(1280, 720);
@@ -52,14 +53,16 @@ public class Main extends PApplet{
         System.out.println("Cam: " + CamHandler.cam.getName());
         System.out.println("Cam Size: " + CamHandler.cam.getViewSize().width + ", " + CamHandler.cam.getViewSize().height);
         System.out.println("Map Populated: " + coords.size() + ", Sample: " + coords.get(i));
+
+        temp = new int[max];
     }
 
     public void draw(){
         image(bg,0,0);
 
-        if(frameCount % d == 0){
-            rot.grow();
-        }
+//        if(frameCount % d == 0){
+//            rot.grow();
+//        }
 
         image(a, 0, 0);
 //        int[] holder = new int[max];
@@ -69,10 +72,16 @@ public class Main extends PApplet{
 //                a.pixels[i] = 0x00000000;
 //            }
 //        }
-        for (int i = 0; i < a.pixels.length; i++) {
-            if (handler.newFlip(coords.get(i)) == -1){
-                a.pixels[i] = 0x00000000;
-            }
+//        for (int i = 0; i < a.pixels.length; i++) {
+//            if (handler.newFlip(coords.get(i)) == -1){
+//                a.pixels[i] = 0x00000000;
+//            }
+//        }
+
+
+        handler.camFlipper(temp);
+        for (int i = 0; i < max; i++) {
+            a.pixels[i] = temp[i];
         }
         a.updatePixels();
 
