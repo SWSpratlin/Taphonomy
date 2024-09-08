@@ -1,11 +1,9 @@
 package rot.test;
 
+import org.opencv.core.Core;
 import processing.core.PApplet;
-
 import processing.core.PImage;
-import java.awt.Point;
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class Main extends PApplet{
 
@@ -78,6 +76,7 @@ public class Main extends PApplet{
     }
 
     public static void main(String[] args) {
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         String[] processingArgs = {"Main"};
         rot.test.Main main = new rot.test.Main();
         PApplet.runSketch(processingArgs, main);
