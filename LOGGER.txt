@@ -1,3 +1,5 @@
+ERROR ON 09.07.2024
+
 Error putting member offsets for class org/bytedeco/javacpp/Loader$Helper.
 java.lang.ExceptionInInitializerError
 	at java.base/java.lang.Class.forName0(Native Method)
