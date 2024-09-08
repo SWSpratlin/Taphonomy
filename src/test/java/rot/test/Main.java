@@ -78,6 +78,7 @@ public class Main extends PApplet{
     }
 
     public static void main(String[] args) {
+        System.out.println(System.getProperty("java.library.path"));
         Loader.load(opencv_java.class);
         String[] processingArgs = {"Main"};
         rot.test.Main main = new rot.test.Main();
