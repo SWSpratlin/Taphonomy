@@ -17,6 +17,7 @@ import org.bytedeco.opencv.opencv_core.*;
 import org.bytedeco.opencv.opencv_imgproc.*;
 import org.bytedeco.opencv.opencv_calib3d.*;
 import org.bytedeco.opencv.opencv_objdetect.*;
+import org.bytedeco.opencv.opencv_videoio.*;
 
 //imported objects
 import static rot.test.Main.max;
@@ -96,7 +97,7 @@ public class CamHandler {
                 for (int i = 0; i < Webcam.getWebcams().size(); i++) {
                     System.out.println(i + ": " + Webcam.getWebcams().get(i).getName());
                 }
-                cam = Webcam.getDefault();
+                cam = Webcam.getWebcamByName("/dev/video0");
                 cam.setViewSize(WebcamResolution.HD.getSize());
                 cam.open();
             } else {

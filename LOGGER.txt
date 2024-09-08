@@ -36,3 +36,23 @@ Caused by: java.lang.ClassNotFoundException: org.bytedeco.javacpp.Loader$Helper
 	at org.bytedeco.javacpp.Loader.load(Loader.java:684)
 	at org.bytedeco.javacpp.opencv_core.<clinit>(opencv_core.java:10)
 	... 15 more
+
+
+ERROR ON 09.08.2024
+
+java.lang.NoClassDefFoundError: org/bytedeco/javacpp/opencv_videoio$VideoCapture
+	at com.github.sarxos.webcam.ds.javacv.JavaCvDevice.getVideoCaptureForOs(JavaCvDevice.java:89)
+	at com.github.sarxos.webcam.ds.javacv.JavaCvDevice.getResolutions(JavaCvDevice.java:106)
+	at com.github.sarxos.webcam.ds.javacv.JavaCvDevice.getResolution(JavaCvDevice.java:141)
+	at com.github.sarxos.webcam.Webcam.getViewSize(Webcam.java:531)
+	at com.github.sarxos.webcam.Webcam.setViewSize(Webcam.java:583)
+	at rot.test.CamHandler.initCam(CamHandler.java:100)
+	at rot.test.Main.settings(Main.java:28)
+	at processing.core.PApplet.handleSettings(PApplet.java:853)
+	at processing.core.PApplet.runSketch(PApplet.java:10113)
+	at rot.test.Main.main(Main.java:83)
+Caused by: java.lang.ClassNotFoundException: org.bytedeco.javacpp.opencv_videoio$VideoCapture
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 10 more
