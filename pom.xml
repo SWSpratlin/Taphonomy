@@ -53,5 +53,10 @@
             <artifactId>webcam-capture-driver-opencv</artifactId>
             <version>0.3.12</version>
         </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>javacv-platform</artifactId>
+            <version>1.5.4</version>
+        </dependency>
     </dependencies>
 </project>
