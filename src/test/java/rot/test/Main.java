@@ -78,6 +78,7 @@ public class Main extends PApplet{
     }
 
     public static void main(String[] args) {
+        System.setProperty("java.library.path", "/usr/java/packages/lib/");
         System.out.println(System.getProperty("java.library.path"));
         Loader.load(opencv_java.class);
         String[] processingArgs = {"Main"};
