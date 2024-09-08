@@ -1,7 +1,7 @@
 package rot.test;
 
 import org.bytedeco.javacpp.Loader;
-import org.bytedeco.javacpp.opencv_java;
+import org.bytedeco.opencv.opencv_java;
 import org.opencv.core.Core;
 import processing.core.PApplet;
 import processing.core.PImage;
