@@ -58,5 +58,15 @@
             <artifactId>javacv-platform</artifactId>
             <version>1.5.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.bytedeco.javacpp-presets</groupId>
+            <artifactId>opencv-platform</artifactId>
+            <version>3.4.1-1.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>javacpp</artifactId>
+            <version>1.5.4</version>
+        </dependency>
     </dependencies>
 </project>
