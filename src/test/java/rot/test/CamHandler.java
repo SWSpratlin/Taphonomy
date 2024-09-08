@@ -143,7 +143,6 @@ public class CamHandler {
 
     /**
      * In progress method to return flipped Image data to the Main method.
-     * @param p the point that is currently being examined
      * @return the horizontally flipped point fromt the camera image
      * @throws WebcamException if no webcam is connected (how did you get this far)
      */
