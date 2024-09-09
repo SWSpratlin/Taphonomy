@@ -58,7 +58,7 @@ public class CamHandler {
             Webcam.setDriver(new NativeDriver());
         } else if (sys.contains("pi")) {
             try{
-                Webcam.setDriver(new JavaCvDriver());
+                Webcam.setDriver(new FFmpegCliDriver());
                 System.out.println("Pi Driver loaded");
             } catch (IllegalArgumentException e) {
                 System.err.println("Pi Driver could not be loaded");
