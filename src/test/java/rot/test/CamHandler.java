@@ -58,7 +58,7 @@ public class CamHandler {
             Webcam.setDriver(new NativeDriver());
         } else if (sys.contains("pi")) {
             try{
-                Webcam.setDriver(new JavaCvDriver());
+                Webcam.setDriver(new FFmpegCliDriver());
                 System.out.println("Pi Driver loaded");
             } catch (IllegalArgumentException e) {
                 System.err.println("Pi Driver could not be loaded");
@@ -91,7 +91,7 @@ public class CamHandler {
                 for (int i = 0; i < Webcam.getWebcams().size(); i++) {
                     System.out.println(i + ": " + Webcam.getWebcams().get(i).getName());
                 }
-                cam = Webcam.getWebcamByName("/dev/video4");
+                cam = Webcam.getWebcamByName("/dev/video0");
                 cam.setViewSize(WebcamResolution.HD.getSize());
                 cam.open();
             } else {
