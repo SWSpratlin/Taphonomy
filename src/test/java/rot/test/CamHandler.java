@@ -2,7 +2,6 @@ package rot.test;
 
 //imported classes
 import com.github.eduramiba.webcamcapture.drivers.NativeDriver;
-import com.github.sarxos.webcam.ds.buildin.WebcamDefaultDriver;
 import com.github.sarxos.webcam.ds.javacv.JavaCvDriver;
 import com.github.sarxos.webcam.ds.ffmpegcli.FFmpegCliDriver;
 import com.github.sarxos.webcam.Webcam;
@@ -59,7 +58,7 @@ public class CamHandler {
             Webcam.setDriver(new NativeDriver());
         } else if (sys.contains("pi")) {
             try{
-                Webcam.setDriver(new WebcamDefaultDriver());
+                Webcam.setDriver(new FFmpegCliDriver());
                 System.out.println("Pi Driver loaded");
             } catch (IllegalArgumentException e) {
                 System.err.println("Pi Driver could not be loaded");

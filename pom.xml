@@ -70,9 +70,9 @@
         <dependency>
             <groupId>com.sarxos.webcam-capture</groupId>
             <artifactId>webcam-capture-driver-ffmpeg-cli</artifactId>
-            <version>3d3fea0</version>
+            <version>0.3.13-SNAPSHOT</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/webcam-capture-driver-ffmpeg-cli-3d3fea0.jar</systemPath>
+            <systemPath>${project.basedir}/lib/webcam-capture-driver-ffmpeg-cli-0.3.13-SNAPSHOT.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.github.sarxos</groupId>
