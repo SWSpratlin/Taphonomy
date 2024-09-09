@@ -39,21 +39,18 @@
             <systemPath>${project.basedir}/lib/core.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>com.github.sarxos</groupId>
+            <artifactId>webcam-capture-driver-opencv</artifactId>
+            <version>0.3.13-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/webcam-capture-driver-opencv-0.3.14-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>io.github.eduramiba</groupId>
             <artifactId>webcam-capture-driver-native</artifactId>
             <version>1.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/webcam-capture-driver-native-1.0.0.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sarxos</groupId>
-            <artifactId>webcam-capture</artifactId>
-            <version>0.3.13-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sarxos</groupId>
-            <artifactId>webcam-capture-driver-opencv</artifactId>
-            <version>0.3.13-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.sun</groupId>
@@ -68,6 +65,11 @@
             <version>5.13.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/jna-platform-5.13.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sarxos</groupId>
+            <artifactId>webcam-capture</artifactId>
+            <version>0.3.13-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.bytedeco</groupId>
