@@ -75,6 +75,13 @@
             <systemPath>${project.basedir}/lib/webcam-capture-driver-ffmpeg-cli-3d3fea0.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>com.sarxos.webcam-capture</groupId>
+            <artifactId>webcam-capture-driver-raspberrypi</artifactId>
+            <version>0.3.14-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/webcam-capture-driver-raspberrypi-0.3.14-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>com.github.sarxos</groupId>
             <artifactId>webcam-capture</artifactId>
             <version>0.3.13-SNAPSHOT</version>
