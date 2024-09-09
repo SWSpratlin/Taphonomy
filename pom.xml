@@ -14,6 +14,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+
+    <repositories>
+        <!-- Added to get the Atmosphere 1.1.0-SNAPSHOT, can be removed when 1.1.0 is released -->
+        <repository>
+            <id>oss.sonatype.org-snapshot</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
     <dependencies>
         <dependency>
             <groupId>org.processing</groupId>
@@ -32,7 +48,12 @@
         <dependency>
             <groupId>com.github.sarxos</groupId>
             <artifactId>webcam-capture</artifactId>
-            <version>0.3.12</version>
+            <version>0.3.13-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sarxos</groupId>
+            <artifactId>webcam-capture-driver-opencv</artifactId>
+            <version>0.3.13-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.sun</groupId>
@@ -47,11 +68,6 @@
             <version>5.13.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/jna-platform-5.13.0.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sarxos</groupId>
-            <artifactId>webcam-capture-driver-opencv</artifactId>
-            <version>0.3.12</version>
         </dependency>
         <dependency>
             <groupId>org.bytedeco</groupId>
