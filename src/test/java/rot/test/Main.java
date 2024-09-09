@@ -79,7 +79,7 @@ public class Main extends PApplet{
 
     public static void main(String[] args) {
         System.setProperty("java.library.path", "/usr/java/packages/lib/");
-        System.setProperty("org.bytedeco.javacpp.logger.debug", "true");
+        //System.setProperty("org.bytedeco.javacpp.logger.debug", "true");
         System.out.println(System.getProperty("java.library.path"));
         Loader.load(opencv_java.class);
         String[] processingArgs = {"Main"};
