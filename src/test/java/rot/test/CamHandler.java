@@ -12,6 +12,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.geom.AffineTransform;
 import java.util.Scanner;
+import java.util.concurrent.TimeoutException;
 
 
 //imported objects
@@ -77,7 +78,7 @@ public class CamHandler {
      *
      * @throws IllegalArgumentException Either there is no webcam, or no Compatible OS (Apple or Pi)
      */
-    public static void initCam() throws IllegalArgumentException {
+    public static void initCam() throws IllegalArgumentException, TimeoutException {
         if (os.toLowerCase().contains("silicon")|| os.toLowerCase().contains("intel")) {
             for (int i = 0; i < Webcam.getWebcams().size(); i++) {
                 System.out.println(i + ": " + Webcam.getWebcams().get(i).getName());
@@ -92,7 +93,7 @@ public class CamHandler {
                 for (int i = 0; i < Webcam.getWebcams().size(); i++) {
                     System.out.println(i + ": " + Webcam.getWebcams().get(i).getName());
                 }
-                cam = Webcam.getWebcamByName("/dev/video0");
+                cam = findCam();
                 cam.setViewSize(WebcamResolution.HD.getSize());
                 cam.open();
             } else {
@@ -102,6 +103,15 @@ public class CamHandler {
         } else {
             throw new IllegalArgumentException("No Compatible OS to load Webcam");
         }
+    }
+
+    public static Webcam findCam() throws WebcamException, TimeoutException {
+        for (int i = 0; i < Webcam.getWebcams().size(); i++) {
+            if (Webcam.getWebcamByName(Webcam.getWebcams(i).toString()) != null){
+                return Webcam.getWebcamByName(Webcam.getWebcams(i).toString());
+            }
+        }
+        return Webcam.getDefault();
     }
 
     /**
