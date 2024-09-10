@@ -11,6 +11,7 @@ import com.github.sarxos.webcam.WebcamResolution;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.geom.AffineTransform;
+import java.sql.Time;
 import java.util.Scanner;
 import java.util.concurrent.TimeoutException;
 

@@ -6,6 +6,7 @@ import org.opencv.core.Core;
 import processing.core.PApplet;
 import processing.core.PImage;
 import java.util.Arrays;
+import java.util.concurrent.TimeoutException;
 
 public class Main extends PApplet{
 
@@ -25,7 +26,11 @@ public class Main extends PApplet{
         System.out.println(utils.sysInfo());
         System.out.println("max: " + width * height);
         handler = new CamHandler(utils, width, height);
-        CamHandler.initCam();
+        try {
+            CamHandler.initCam();
+        } catch (TimeoutException e) {
+            e = new TimeoutException("Shit Timed Out");
+        }
 
         int w = CamHandler.cam.getViewSize().width;
         int h = CamHandler.cam.getViewSize().height;
@@ -81,7 +86,9 @@ public class Main extends PApplet{
         System.setProperty("java.library.path", "/usr/java/packages/lib/");
         //System.setProperty("org.bytedeco.javacpp.logger.debug", "true");
         System.out.println(System.getProperty("java.library.path"));
-        Loader.load(opencv_java.class);
+        if(System.getProperty("os.name").toLowerCase().contains("linux")){
+            Loader.load(opencv_java.class);
+        }
         String[] processingArgs = {"Main"};
         rot.test.Main main = new rot.test.Main();
         PApplet.runSketch(processingArgs, main);
