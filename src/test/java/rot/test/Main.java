@@ -84,7 +84,7 @@ public class Main extends PApplet {
         a.updatePixels();
 
         fill(0x80000000);
-        rect(0, 0, 350, 200);
+        rect(0, 0, 500, 200);
         textSize(30);
         fill(255);
         text("Cam Framerate: " + CamHandler.cam.getFPS(), 40, 40);
