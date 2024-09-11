@@ -4,17 +4,12 @@ package rot.test;
 
 import com.github.eduramiba.webcamcapture.drivers.NativeDriver;
 import com.github.sarxos.webcam.ds.gst1.Gst1Driver;
-import com.github.sarxos.webcam.ds.javacv.JavaCvDriver;
-import com.github.sarxos.webcam.ds.ffmpegcli.FFmpegCliDriver;
-import com.github.sarxos.webcam.ds.v4l4j.V4l4jDriver;
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamException;
 import com.github.sarxos.webcam.WebcamResolution;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.geom.AffineTransform;
-import java.sql.Time;
 import java.util.Scanner;
 import java.util.concurrent.TimeoutException;
 

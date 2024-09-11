@@ -1,11 +1,8 @@
 package rot.test;
 
-import org.bytedeco.javacpp.Loader;
-import org.bytedeco.opencv.opencv_java;
-import org.opencv.core.Core;
+
 import processing.core.PApplet;
 import processing.core.PImage;
-
 import java.util.Arrays;
 import java.util.concurrent.TimeoutException;
 
@@ -59,28 +56,39 @@ public class Main extends PApplet {
     public void draw() {
         image(bg, 0, 0);
 
-//        if (frameCount % d == 0) {
-//            rot.grow();
-//        }
+        if (frameCount % d == 0) {
+            rot.grow();
+        }
 
         image(a, 0, 0);
         handler.camFlipper(temp);
-        for (int i = 0; i < max; i++) {
-            a.pixels[i] = temp[i];
-        }
+
+        //Raw Video Stream
 //        for (int i = 0; i < max; i++) {
-//            if (temp[i] == -1) {
-//                a.pixels[i] = 0x00000000;
-//            }
+//            a.pixels[i] = temp[i];
 //        }
 
-//        for (int y = mouseY - 20; y < mouseY + 20; y++) {
-//            for (int x = mouseX - 20; x < mouseX + 20; x++) {
-//                if(x > 0 && x < width && y > 0 && y < height){
-//                    a.pixels[x + (y * width)] = 0x00000000;
-//                }
-//            }
-//        }
+        //Processed Video Stream
+        for (int i = 0; i < max; i++) {
+            if (System.getProperty("os.name").toLowerCase().contains("linux")) {
+                if (temp[i] == -131587){
+                    a.pixels[i] = 0x00000000;
+                }
+            } else {
+                if (temp[i] == -1) {
+                    a.pixels[i] = 0x00000000;
+                }
+            }
+        }
+
+
+        for (int y = mouseY - 20; y < mouseY + 20; y++) {
+            for (int x = mouseX - 20; x < mouseX + 20; x++) {
+                if (x > 0 && x < width && y > 0 && y < height) {
+                    a.pixels[x + (y * width)] = 0x00000000;
+                }
+            }
+        }
         a.updatePixels();
 
         fill(0x80000000);
@@ -95,11 +103,9 @@ public class Main extends PApplet {
     }
 
     public static void main(String[] args) {
-        System.setProperty("java.library.path", "/usr/java/packages/lib/");
-        //System.setProperty("org.bytedeco.javacpp.logger.debug", "true");
-        System.out.println(System.getProperty("java.library.path"));
         if (System.getProperty("os.name").toLowerCase().contains("linux")) {
-            Loader.load(opencv_java.class);
+            System.setProperty("java.library.path", "/usr/java/packages/lib/");
+            System.out.println(System.getProperty("java.library.path"));
         }
         String[] processingArgs = {"Main"};
         rot.test.Main main = new rot.test.Main();

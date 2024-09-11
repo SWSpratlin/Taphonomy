@@ -40,13 +40,6 @@
             <systemPath>${project.basedir}/lib/core.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>com.github.sarxos</groupId>
-            <artifactId>webcam-capture-driver-opencv</artifactId>
-            <version>0.3.13-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/webcam-capture-driver-opencv-0.3.14-SNAPSHOT.jar</systemPath>
-        </dependency>
-        <dependency>
             <groupId>io.github.eduramiba</groupId>
             <artifactId>webcam-capture-driver-native</artifactId>
             <version>1.0</version>
@@ -68,13 +61,6 @@
             <systemPath>${project.basedir}/lib/jna-platform-5.13.0.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>com.sarxos.webcam-capture</groupId>
-            <artifactId>webcam-capture-driver-ffmpeg-cli</artifactId>
-            <version>0.3.13-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/webcam-capture-driver-ffmpeg-cli-0.3.13-SNAPSHOT.jar</systemPath>
-        </dependency>
-        <dependency>
             <groupId>com.github.sarxos</groupId>
             <artifactId>webcam-capture</artifactId>
             <version>0.3.14-SNAPSHOT</version>
@@ -87,36 +73,6 @@
             <version>0.3.13-SNAPSHOT</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/webcam-capture-driver-gst1-0.3.13-SNAPSHOT.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sarxos</groupId>
-            <artifactId>webcam-capture-driver-v4l4j</artifactId>
-            <version>0.3.13-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sarxos</groupId>
-            <artifactId>v4l4j</artifactId>
-            <version>0.9.1-r507</version>
-        </dependency>
-        <dependency>
-            <groupId>org.bytedeco</groupId>
-            <artifactId>javacv-platform</artifactId>
-            <version>1.5.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.bytedeco</groupId>
-            <artifactId>javacv</artifactId>
-            <version>1.5.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.bytedeco</groupId>
-            <artifactId>opencv-platform</artifactId>
-            <version>4.4.0-1.5.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.bytedeco</groupId>
-            <artifactId>javacpp</artifactId>
-            <version>1.5.4</version>
         </dependency>
         <dependency>
             <groupId>com.nativelibs4java</groupId>
@@ -144,7 +100,5 @@
             <artifactId>gst1-java-fx</artifactId>
             <version>0.9.0</version>
         </dependency>
-
-
     </dependencies>
 </project>
