@@ -102,6 +102,15 @@ public class Main extends PApplet {
         utils.printMemory(frameCount, 600);
     }
 
+    public void keyPressed(){
+        if (key == CODED){
+            if (keyCode == ENTER){
+                System.out.println("Exiting");
+                System.exit(0);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         if (System.getProperty("os.name").toLowerCase().contains("linux")) {
             System.setProperty("java.library.path", "/usr/java/packages/lib/");
