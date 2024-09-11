@@ -24,16 +24,16 @@ public class Utils {
      */
     public String sysInfo() {
 
-        osName = System.getProperty("os.name");
-        osArch = System.getProperty("os.arch");
+        osName = System.getProperty("os.name").toLowerCase();
+        osArch = System.getProperty("os.arch").toLowerCase();
 
-        if (osName.toLowerCase().contains("mac") && osArch.toLowerCase().contains("aarch64")) {
+        if (osName.contains("mac") && osArch.contains("aarch64")) {
             return "Mac Silicon";
-        } else if (osName.toLowerCase().contains("mac") && !osArch.toLowerCase().contains("aarch64")) {
+        } else if (osName.contains("mac") && !osArch.contains("aarch64")) {
             return "Mac Intel";
-        } else if (osName.toLowerCase().contains("linux") && osArch.toLowerCase().contains("aarch64")) {
+        } else if (osName.contains("linux") && osArch.contains("aarch64")) {
             return "Linux / Pi";
-        } else if (osName.toLowerCase().contains("windows")) {
+        } else if (osName.contains("windows")) {
             return "Windows";
         }
         return "No Compatible OS";

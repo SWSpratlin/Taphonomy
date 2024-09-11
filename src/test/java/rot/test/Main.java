@@ -21,6 +21,7 @@ public class Main extends PApplet {
     public void settings() {
         size(1280, 720);
         utils = new Utils();
+        utils.sysInfo();
         System.out.println(utils.sysInfo());
         System.out.println("max: " + width * height);
         handler = new CamHandler(utils, width, height);
@@ -70,25 +71,24 @@ public class Main extends PApplet {
 
         //Processed Video Stream
         for (int i = 0; i < max; i++) {
-            if (System.getProperty("os.name").toLowerCase().contains("linux")) {
-                if (temp[i] == -131587){
+            if (Utils.osName.contains("linux")) {
+                if (temp[i] == -131587) {
                     a.pixels[i] = 0x00000000;
                 }
-            } else {
+            } else if (Utils.osName.contains("mac")) {
                 if (temp[i] == -1) {
                     a.pixels[i] = 0x00000000;
                 }
             }
         }
 
-
-        for (int y = mouseY - 20; y < mouseY + 20; y++) {
-            for (int x = mouseX - 20; x < mouseX + 20; x++) {
-                if (x > 0 && x < width && y > 0 && y < height) {
-                    a.pixels[x + (y * width)] = 0x00000000;
-                }
-            }
-        }
+//        for (int y = mouseY - 20; y < mouseY + 20; y++) {
+//            for (int x = mouseX - 20; x < mouseX + 20; x++) {
+//                if (x > 0 && x < width && y > 0 && y < height) {
+//                    a.pixels[x + (y * width)] = 0x00000000;
+//                }
+//            }
+//        }
         a.updatePixels();
 
         fill(0x80000000);
@@ -97,17 +97,15 @@ public class Main extends PApplet {
         fill(255);
         text("Cam Framerate: " + CamHandler.cam.getFPS(), 40, 40);
         text("Framerate: " + frameRate, 40, 100);
-        text("Pixel Value" + a.pixels[mouseX + mouseY * width], 40, 150);
+        text("Pixel Value" + Integer.toHexString(a.pixels[mouseX + mouseY * width]), 40, 150);
 
         utils.printMemory(frameCount, 600);
     }
 
-    public void keyPressed(){
-        if (key == CODED){
-            if (keyCode == ENTER){
-                System.out.println("Exiting");
-                System.exit(0);
-            }
+    public void keyPressed() {
+        if (keyCode == ENTER || keyCode == RETURN) {
+            System.out.println("Exiting");
+            System.exit(0);
         }
     }
 
