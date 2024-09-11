@@ -74,14 +74,13 @@ public class Main extends PApplet {
 //            }
 //        }
 
-        for (int y = mouseY - 20; y < mouseY + 20; y++) {
-            for (int x = mouseX - 20; x < mouseX + 20; x++) {
-                if(x > 0 && x < width && y > 0 && y < height){
-                    a.pixels[x + (y * width)] = 0x00000000;
-                }
-            }
-
-        }
+//        for (int y = mouseY - 20; y < mouseY + 20; y++) {
+//            for (int x = mouseX - 20; x < mouseX + 20; x++) {
+//                if(x > 0 && x < width && y > 0 && y < height){
+//                    a.pixels[x + (y * width)] = 0x00000000;
+//                }
+//            }
+//        }
         a.updatePixels();
 
         fill(0x80000000);
