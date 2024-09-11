@@ -89,8 +89,9 @@ public class Main extends PApplet {
         fill(255);
         text("Cam Framerate: " + CamHandler.cam.getFPS(), 40, 40);
         text("Framerate: " + frameRate, 40, 100);
-        text("Pixel Value" + Integer.toHexString(a.pixels[mouseX + mouseY * width]), 40, 150);
-        text("Cam Pixel Value" + Integer.toHexString(temp[mouseX + mouseY * width]), 40, 200);
+        text("Pixel Value: " + Integer.toHexString(a.pixels[mouseX + mouseY * width]), 40, 150);
+        text("Cam Pixel Value: " + Integer.toHexString(temp[mouseX + mouseY * width])
+                + " int: " + temp[mouseX + mouseY * width], 40, 200);
 
         utils.printMemory(frameCount, 600);
     }
