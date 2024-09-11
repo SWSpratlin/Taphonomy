@@ -57,38 +57,31 @@ public class Main extends PApplet {
     public void draw() {
         image(bg, 0, 0);
 
-        if (frameCount % d == 0) {
-            rot.grow();
-        }
+//        if (frameCount % d == 0) {
+//            rot.grow();
+//        }
 
         image(a, 0, 0);
         handler.camFlipper(temp);
 
         //Raw Video Stream
-//        for (int i = 0; i < max; i++) {
-//            a.pixels[i] = temp[i];
-//        }
-
-        //Processed Video Stream
         for (int i = 0; i < max; i++) {
-            if (Utils.osName.contains("linux")) {
-                if (Integer.toHexString(temp[i]).charAt(2) == 102) {
-                    a.pixels[i] = 0x00000000;
-                }
-            } else if (Utils.osName.contains("mac")) {
-                if (temp[i] == -1) {
-                    a.pixels[i] = 0x00000000;
-                }
-            }
+            a.pixels[i] = temp[i];
         }
 
-//        for (int y = mouseY - 20; y < mouseY + 20; y++) {
-//            for (int x = mouseX - 20; x < mouseX + 20; x++) {
-//                if (x > 0 && x < width && y > 0 && y < height) {
-//                    a.pixels[x + (y * width)] = temp[y * width + x];
+        //Processed Video Stream
+//        for (int i = 0; i < max; i++) {
+//            if (Utils.osName.contains("linux")) {
+//                if (Integer.toHexString(temp[i]).charAt(2) == 102) {
+//                    a.pixels[i] = 0x00000000;
+//                }
+//            } else if (Utils.osName.contains("mac")) {
+//                if (temp[i] == -1) {
+//                    a.pixels[i] = 0x00000000;
 //                }
 //            }
 //        }
+
         a.updatePixels();
 
         fill(0x80000000);
