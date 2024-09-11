@@ -98,6 +98,7 @@ public class CamHandler {
                 //cam = findCam();
                 //cam = Webcam.getWebcamByName("/dev/video10");
                 cam.setViewSize(WebcamResolution.HD.getSize());
+                cam.
                 cam.open();
             } else {
                 System.out.println("Pi Cam Not Loaded");
