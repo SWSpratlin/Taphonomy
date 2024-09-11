@@ -7,9 +7,7 @@ import com.github.sarxos.webcam.ds.gst1.Gst1Driver;
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamException;
 import com.github.sarxos.webcam.WebcamResolution;
-import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.geom.AffineTransform;
 import java.util.Scanner;
 import java.util.concurrent.TimeoutException;
 
@@ -116,39 +114,6 @@ public class CamHandler {
             }
         }
         return Webcam.getDefault();
-    }
-
-    /**
-     * Reads the loaded Webcam and flips the image using AffineTransform.
-     * Still in testing
-     *
-     * @return int array holding the flipped Image data. Draw to PImage.
-     * @throws WebcamException If the webcam is null, this will not fire.
-     */
-    public int[] getMirroredImage(int[] output) throws WebcamException {
-        //Initialize the original image and output image
-        if (cam != null) {
-            BufferedImage image = cam.getImage();
-            int w = image.getWidth();
-            int h = image.getHeight();
-
-            BufferedImage flipped = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
-
-            AffineTransform at = new AffineTransform();
-            at.setToScale(-1, 1);
-            at.translate(-image.getWidth(), 0);
-
-            Graphics2D g = flipped.createGraphics();
-            g.drawImage(image, at, null);
-            g.dispose();
-
-            int rX = (int) (Math.random() * image.getWidth());
-            int rY = (int) (Math.random() * image.getHeight());
-//            System.out.print("flipped" + flipped.getRGB(rX, rY) + ", ");
-//            System.out.println("Regular" + image.getRGB(rX, rY));
-            flipped.getRGB(0, 0, image.getWidth(), image.getHeight(), output, 0, image.getWidth());
-            return output;
-        } else throw new WebcamException("Webcam Cannot be Null");
     }
 
     /**
