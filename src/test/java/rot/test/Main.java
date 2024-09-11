@@ -5,10 +5,11 @@ import org.bytedeco.opencv.opencv_java;
 import org.opencv.core.Core;
 import processing.core.PApplet;
 import processing.core.PImage;
+
 import java.util.Arrays;
 import java.util.concurrent.TimeoutException;
 
-public class Main extends PApplet{
+public class Main extends PApplet {
 
     public static PImage a;
     public static PImage bg;
@@ -20,7 +21,7 @@ public class Main extends PApplet{
     public static int max;
     public static int[] temp;
 
-    public void settings(){
+    public void settings() {
         size(1280, 720);
         utils = new Utils();
         System.out.println(utils.sysInfo());
@@ -36,7 +37,7 @@ public class Main extends PApplet{
         int h = CamHandler.cam.getViewSize().height;
         a = createImage(w, h, ARGB);
         a.loadPixels();
-        max = a .pixels.length;
+        max = a.pixels.length;
         System.out.println(max);
         Arrays.fill(a.pixels, 0xFF000000);
 
@@ -47,7 +48,7 @@ public class Main extends PApplet{
         rot = new ArrayRot(this, a, map);
         rot.drawMap();
 
-        int i = (int)random((width*height) -1);
+        int i = (int) random((width * height) - 1);
         //Debug Print Statements
         System.out.println("Cam: " + CamHandler.cam.getName());
         System.out.println("Cam Size: " + CamHandler.cam.getViewSize().width + ", " + CamHandler.cam.getViewSize().height);
@@ -55,19 +56,28 @@ public class Main extends PApplet{
         temp = new int[max];
     }
 
-    public void draw(){
-        image(bg,0,0);
+    public void draw() {
+        image(bg, 0, 0);
 
-        if(frameCount % d == 0){
+        if (frameCount % d == 0) {
             rot.grow();
         }
 
         image(a, 0, 0);
         handler.camFlipper(temp);
         for (int i = 0; i < max; i++) {
-            if(temp[i] == -1){
+            if (temp[i] == -1) {
                 a.pixels[i] = 0x00000000;
             }
+        }
+
+        for (int y = mouseY - 20; y < mouseY + 20; y++) {
+            for (int x = mouseX - 20; x < mouseX + 20; x++) {
+                if(x > 0 && x < width && y > 0 && y < height){
+                    a.pixels[x + (y * width)] = 0x00000000;
+                }
+            }
+
         }
         a.updatePixels();
 
@@ -86,7 +96,7 @@ public class Main extends PApplet{
         System.setProperty("java.library.path", "/usr/java/packages/lib/");
         //System.setProperty("org.bytedeco.javacpp.logger.debug", "true");
         System.out.println(System.getProperty("java.library.path"));
-        if(System.getProperty("os.name").toLowerCase().contains("linux")){
+        if (System.getProperty("os.name").toLowerCase().contains("linux")) {
             Loader.load(opencv_java.class);
         }
         String[] processingArgs = {"Main"};
