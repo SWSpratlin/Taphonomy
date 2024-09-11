@@ -71,7 +71,7 @@ public class Main extends PApplet {
         //Processed Video Stream
         for (int i = 0; i < max; i++) {
             if (Utils.osName.contains("linux")) {
-                if (temp[i] > -130000) {
+                if (temp[i] < -130000 && temp[i] > -135000) {
                     a.pixels[i] = 0x00000000;
                 }
             } else if (Utils.osName.contains("mac")) {
