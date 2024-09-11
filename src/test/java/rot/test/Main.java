@@ -59,17 +59,20 @@ public class Main extends PApplet {
     public void draw() {
         image(bg, 0, 0);
 
-        if (frameCount % d == 0) {
-            rot.grow();
-        }
+//        if (frameCount % d == 0) {
+//            rot.grow();
+//        }
 
         image(a, 0, 0);
         handler.camFlipper(temp);
         for (int i = 0; i < max; i++) {
-            if (temp[i] == -1) {
-                a.pixels[i] = 0x00000000;
-            }
+            a.pixels[i] = temp[i];
         }
+//        for (int i = 0; i < max; i++) {
+//            if (temp[i] == -1) {
+//                a.pixels[i] = 0x00000000;
+//            }
+//        }
 
         for (int y = mouseY - 20; y < mouseY + 20; y++) {
             for (int x = mouseX - 20; x < mouseX + 20; x++) {
