@@ -95,7 +95,8 @@ public class CamHandler {
                 for (int i = 0; i < Webcam.getWebcams().size(); i++) {
                     System.out.println(i + ": " + Webcam.getWebcams().get(i).getName());
                 }
-                cam = findCam();
+                cam = Webcam.getDefault();
+                //cam = findCam();
                 //cam = Webcam.getWebcamByName("/dev/video10");
                 cam.setViewSize(WebcamResolution.HD.getSize());
                 cam.open();
