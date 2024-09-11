@@ -1,6 +1,7 @@
 package rot.test;
 
 //imported classes
+
 import com.github.eduramiba.webcamcapture.drivers.NativeDriver;
 import com.github.sarxos.webcam.ds.gst1.Gst1Driver;
 import com.github.sarxos.webcam.ds.javacv.JavaCvDriver;
@@ -9,6 +10,7 @@ import com.github.sarxos.webcam.ds.v4l4j.V4l4jDriver;
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamException;
 import com.github.sarxos.webcam.WebcamResolution;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.geom.AffineTransform;
@@ -31,6 +33,7 @@ public class CamHandler {
 
     /**
      * Constructor, takes 2 arguments
+     *
      * @param u Utils object. Should be initialized in Main class
      * @param w Width of the camera image being handled
      * @param h Height of the camera image being handled
@@ -38,10 +41,10 @@ public class CamHandler {
     public CamHandler(Utils u, int w, int h) {
         os = u.sysInfo();
         initDriver();
-        int j =0;
+        int j = 0;
 
         // Creates an array that stores the reverse values of a single Width
-        flip = new int[w*h];
+        flip = new int[w * h];
         System.out.println(flip.length);
         Utils.flipImageArray(w, h, flip);
         System.out.println(flip.length);
@@ -50,6 +53,7 @@ public class CamHandler {
 
     /**
      * Private method to Initiate the correct driver depending on the OS
+     *
      * @throws IllegalArgumentException No compatible OS
      */
     private static void initDriver() throws IllegalArgumentException {
@@ -57,11 +61,11 @@ public class CamHandler {
         if (sys.contains("silicon")) {
             Webcam.setDriver(new NativeDriver());
             System.out.println("Silicon Driver loaded");
-        }else if (sys.contains("intel")){
+        } else if (sys.contains("intel")) {
             System.out.println("We got to the driver loader");
             Webcam.setDriver(new NativeDriver());
         } else if (sys.contains("pi")) {
-            try{
+            try {
                 Webcam.setDriver(new Gst1Driver());
                 System.out.println("Pi Driver loaded");
             } catch (IllegalArgumentException e) {
@@ -81,7 +85,7 @@ public class CamHandler {
      * @throws IllegalArgumentException Either there is no webcam, or no Compatible OS (Apple or Pi)
      */
     public static void initCam() throws IllegalArgumentException, TimeoutException {
-        if (os.toLowerCase().contains("silicon")|| os.toLowerCase().contains("intel")) {
+        if (os.toLowerCase().contains("silicon") || os.toLowerCase().contains("intel")) {
             for (int i = 0; i < Webcam.getWebcams().size(); i++) {
                 System.out.println(i + ": " + Webcam.getWebcams().get(i).getName());
             }
@@ -111,7 +115,7 @@ public class CamHandler {
 
     public static Webcam findCam() throws WebcamException, TimeoutException {
         for (int i = 0; i < Webcam.getWebcams().size(); i++) {
-            if (Webcam.getWebcamByName(Webcam.getWebcams(i).toString()) != null){
+            if (Webcam.getWebcamByName(Webcam.getWebcams(i).toString()) != null) {
                 return Webcam.getWebcamByName(Webcam.getWebcams(i).toString());
             }
         }
@@ -121,12 +125,13 @@ public class CamHandler {
     /**
      * Reads the loaded Webcam and flips the image using AffineTransform.
      * Still in testing
+     *
      * @return int array holding the flipped Image data. Draw to PImage.
      * @throws WebcamException If the webcam is null, this will not fire.
      */
     public int[] getMirroredImage(int[] output) throws WebcamException {
         //Initialize the original image and output image
-        if(cam != null){
+        if (cam != null) {
             BufferedImage image = cam.getImage();
             int w = image.getWidth();
             int h = image.getHeight();
@@ -141,28 +146,31 @@ public class CamHandler {
             g.drawImage(image, at, null);
             g.dispose();
 
-            int rX = (int)(Math.random() * image.getWidth());
-            int rY = (int)(Math.random() * image.getHeight());
+            int rX = (int) (Math.random() * image.getWidth());
+            int rY = (int) (Math.random() * image.getHeight());
 //            System.out.print("flipped" + flipped.getRGB(rX, rY) + ", ");
 //            System.out.println("Regular" + image.getRGB(rX, rY));
-            flipped.getRGB(0,0,image.getWidth(), image.getHeight(), output, 0, image.getWidth());
+            flipped.getRGB(0, 0, image.getWidth(), image.getHeight(), output, 0, image.getWidth());
             return output;
         } else throw new WebcamException("Webcam Cannot be Null");
     }
 
     /**
      * In progress method to return flipped Image data to the Main method.
+     *
      * @return the horizontally flipped point fromt the camera image
      * @throws WebcamException if no webcam is connected (how did you get this far)
      */
 
     public int[] camFlipper(int[] output) throws WebcamException {
-        if (cam != null){
+        if (cam != null) {
 
             BufferedImage image = cam.getImage();
             for (int i = 0; i < image.getHeight(); i++) {
                 for (int j = 0; j < image.getWidth(); j++) {
-                    output[flip[j + (i * image.getWidth())]] = image.getRGB(j, i);
+                    if (j + (i * image.getWidth()) < max) {
+                        output[flip[j + (i * image.getWidth())]] = image.getRGB(j, i);
+                    }
                 }
             }
             return output;
