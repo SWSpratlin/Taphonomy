@@ -89,6 +89,11 @@
             <systemPath>${project.basedir}/lib/webcam-capture-driver-gst1-0.3.13-SNAPSHOT.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>com.github.sarxos</groupId>
+            <artifactId>webcam-capture-driver-v4l4j</artifactId>
+            <version>0.3.13-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>org.bytedeco</groupId>
             <artifactId>javacv-platform</artifactId>
             <version>1.5.4</version>

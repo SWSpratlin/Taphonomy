@@ -5,6 +5,7 @@ import com.github.eduramiba.webcamcapture.drivers.NativeDriver;
 import com.github.sarxos.webcam.ds.gst1.Gst1Driver;
 import com.github.sarxos.webcam.ds.javacv.JavaCvDriver;
 import com.github.sarxos.webcam.ds.ffmpegcli.FFmpegCliDriver;
+import com.github.sarxos.webcam.ds.v4l4j.V4l4jDriver;
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamException;
 import com.github.sarxos.webcam.WebcamResolution;
@@ -61,7 +62,7 @@ public class CamHandler {
             Webcam.setDriver(new NativeDriver());
         } else if (sys.contains("pi")) {
             try{
-                Webcam.setDriver(new FFmpegCliDriver());
+                Webcam.setDriver(new V4l4jDriver());
                 System.out.println("Pi Driver loaded");
             } catch (IllegalArgumentException e) {
                 System.err.println("Pi Driver could not be loaded");
