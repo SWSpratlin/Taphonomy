@@ -72,8 +72,7 @@ public class Main extends PApplet {
         //Processed Video Stream
         for (int i = 0; i < max; i++) {
             if (Utils.osName.contains("linux")) {
-                char checker = Integer.toHexString(temp[i]).charAt(2);
-                if (checker == 102) {
+                if (Integer.toHexString(temp[i]).charAt(2) == 102) {
                     a.pixels[i] = 0x00000000;
                 }
             } else if (Utils.osName.contains("mac")) {
