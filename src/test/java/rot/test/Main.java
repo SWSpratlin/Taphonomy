@@ -69,7 +69,7 @@ public class Main extends PApplet {
 //        for (int i = 0; i < max; i++) {
 //            a.pixels[i] = temp[i];
 //        }
-
+        //changes for git
         //Processed Video Stream
         for (int i = 0; i < max; i++) {
             if (Utils.osName.contains("linux")) {
