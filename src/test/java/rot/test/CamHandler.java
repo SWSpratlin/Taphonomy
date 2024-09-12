@@ -14,7 +14,6 @@ import java.util.concurrent.TimeoutException;
 
 //imported objects
 import static rot.test.Main.max;
-//import static rot.test.Main.coords;
 
 //Class start
 public class CamHandler {

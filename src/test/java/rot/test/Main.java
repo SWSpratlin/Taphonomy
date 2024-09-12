@@ -1,8 +1,6 @@
 package rot.test;
 
-import processing.awt.PSurfaceAWT;
 import processing.core.PApplet;
-import processing.core.PGraphics;
 import processing.core.PImage;
 import java.util.Arrays;
 import java.util.concurrent.TimeoutException;
@@ -20,12 +18,14 @@ public class Main extends PApplet {
     public static int[] temp;
 
     public void settings() {
-        size(1280, 720);
+        fullScreen(P2D, SPAN);
+        windowRatio(1280,720);
+        size(displayWidth, displayHeight, P2D);
         utils = new Utils();
         utils.sysInfo();
         System.out.println(utils.sysInfo());
-        System.out.println("max: " + width * height);
-        handler = new CamHandler(utils, width, height);
+        System.out.println("max: " + rwidth * rheight);
+        handler = new CamHandler(utils, rwidth, rheight);
         try {
             CamHandler.initCam();
         } catch (TimeoutException e) {
@@ -47,7 +47,7 @@ public class Main extends PApplet {
         rot = new ArrayRot(this, a, map);
         rot.drawMap();
 
-        int i = (int) random((width * height) - 1);
+        int i = (int) random((rwidth * rheight) - 1);
         //Debug Print Statements
         System.out.println("Cam: " + CamHandler.cam.getName());
         System.out.println("Cam Size: " + CamHandler.cam.getViewSize().width + ", " + CamHandler.cam.getViewSize().height);
@@ -91,9 +91,9 @@ public class Main extends PApplet {
         fill(255);
         text("Cam Framerate: " + CamHandler.cam.getFPS(), 40, 40);
         text("Framerate: " + frameRate, 40, 100);
-        text("Pixel Value: " + Integer.toHexString(a.pixels[mouseX + mouseY * width]), 40, 150);
-        text("Cam Pixel Value: " + Integer.toHexString(temp[mouseX + mouseY * width])
-                + " int: " + temp[mouseX + mouseY * width], 40, 200);
+        text("Pixel Value: " + Integer.toHexString(a.pixels[rmouseX + rmouseY * rwidth]), 40, 150);
+        text("Cam Pixel Value: " + Integer.toHexString(temp[rmouseX + rmouseY * rwidth])
+                + " int: " + temp[rmouseX + rmouseY * rwidth], 40, 200);
 
         utils.printMemory(frameCount, 600);
     }

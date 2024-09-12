@@ -236,7 +236,7 @@ public class ArrayRot {
      * @param index the central index to base the rest of the updates on.
      */
     private void updateSet(int index) {
-        int width = s.width;
+        int width = s.rwidth;
         updater[index] = true;
         if (index - 1 > 0) updater[index - 1] = true;
         if (index - 2 > 0) updater[index - 2] = true;
@@ -270,7 +270,7 @@ public class ArrayRot {
      */
     public void grow() {
         int j = 0;
-        for (int i = -(s.width * 2 - 2); i < max; i++) {
+        for (int i = -(s.rwidth * 2 - 2); i < max; i++) {
             if (j < max) {
                 scan(j);
                 j++;
