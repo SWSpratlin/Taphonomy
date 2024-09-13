@@ -20,7 +20,7 @@ public class Main extends PApplet {
     PGraphics graphics;
 
     public void settings() {
-        fullScreen(P2D, 1);
+        fullScreen(P2D);
         windowRatio(1280,720);
         size(displayWidth, displayHeight, P2D);
         graphics = new PGraphics();
@@ -78,7 +78,7 @@ public class Main extends PApplet {
         //Processed Video Stream
         for (int i = 0; i < max; i++) {
             if (Utils.osName.contains("linux")) {
-                if (temp[i] > -132000) {
+                if (temp[i] > -133000) {
                     a.pixels[i] = 0x00000000;
                 }
             } else if (Utils.osName.contains("mac")) {
