@@ -280,9 +280,7 @@ public class ArrayRot {
         for (int i = 0; i < 6; i++) {
             int random = (int)s.random(u.length);
             if (u[random] > 0 && u[random] < max) {
-                if (!updater[u[random]]) {
-                    updater[u[random]] = true;
-                }
+                updater[u[random]] = true;
             }
         }
     }
