@@ -260,28 +260,32 @@ public class ArrayRot {
     private void randSet(int index) {
         int width = s.rwidth;
         int[] u = new int[17];
-        u[0] = index - 1;
-        u[1] = index - 2;
-        u[2] = index - width;
-        u[3] = index - width - 1;
-        u[4] = index - (width * 2);
-        u[5] = index - (width - 1);
-        u[6] = index - width + 1;
-        u[7] = index - (width * 2) - 1;
-        u[8] = index - (width * 2) + 1;
-        u[9] = index + 1;
-        u[10] = index + 2;
-        u[11] = index + width;
-        u[12] = index + width + 1;
-        u[13] = index + width - 1;
-        u[14] = index + (width * 2) - 1;
-        u[15] = index + (width * 2) + 1;
-        u[16] = index + (width * 2);
-        for (int i = 0; i < 6; i++) {
-            int random = (int)s.random(u.length);
-            if (u[random] > 0 && u[random] < max) {
-                updater[u[random]] = true;
-            }
+        int random = (int)(Math.random() * 3);
+        switch (random) {
+            case 0:
+                if (index - 1 > 0) updater[index - 1] = true;
+                if ((index - width - 1) > 0) updater[index - width - 1] = true;
+                if (index + width - 1 < max) updater[index + width - 1] = true;
+                if ((index + (width * 2) + 1) < max) updater[index + (width * 2) + 1] = true;
+                break;
+            case 1:
+                if (index - 2 > 0) updater[index - 2] = true;
+                if ((index - width + 1) > 0) updater[index - width + 1] = true;
+                if ((index - (width * 2) + 1) > 0) updater[index - (width * 2) + 1] = true;
+                if (index + 1 < max) updater[index + 1] = true;
+                break;
+            case 2:
+                if (index - width > 0) updater[index - width] = true;
+                if ((index - (width * 2) - 1) > 0) updater[index - (width * 2) - 1] = true;
+                if (index + width + 1 < max) updater[index + width + 1] = true;
+                if (index + 2 < max) updater[index + 2] = true;
+                break;
+            case 3:
+                if ((index - (width * 2)) > 0) updater[index - (width * 2)] = true;
+                if (index + width < max) updater[index + width] = true;
+                if (index + (width * 2) < max) updater[index + (width * 2)] = true;
+                if ((index + (width * 2) - 1) < max) updater[index + (width * 2) - 1] = true;
+                break;
         }
     }
 
