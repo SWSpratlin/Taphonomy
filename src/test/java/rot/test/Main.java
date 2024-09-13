@@ -45,8 +45,8 @@ public class Main extends PApplet {
         System.out.println(max);
         Arrays.fill(a.pixels, 0xFF000000);
 
-        bg = loadImage("data/bg.jpg");
-        map = loadImage("data/map.png");
+        bg = loadImage("data/Taphonomy.jpg");
+        map = loadImage("data/rot_map.png");
         map.loadPixels();
         System.out.println("Map Loaded");
         rot = new ArrayRot(this, a, map);
