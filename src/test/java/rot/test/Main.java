@@ -22,7 +22,7 @@ public class Main extends PApplet {
     public void settings() {
         fullScreen(P2D);
         windowRatio(1280,720);
-        size(displayWidth, displayHeight+3, P2D);
+        size(displayWidth, displayHeight+5, P2D);
         graphics = new PGraphics();
         this.g = graphics;
         background(0);
