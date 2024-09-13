@@ -21,6 +21,7 @@ public class Main extends PApplet {
         fullScreen(P2D, SPAN);
         windowRatio(1280,720);
         size(displayWidth, displayHeight, P2D);
+        background(0);
         utils = new Utils();
         utils.sysInfo();
         System.out.println(utils.sysInfo());
