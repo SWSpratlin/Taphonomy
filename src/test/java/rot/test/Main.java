@@ -1,6 +1,7 @@
 package rot.test;
 
 import processing.core.PApplet;
+import processing.core.PGraphics;
 import processing.core.PImage;
 import java.util.Arrays;
 import java.util.concurrent.TimeoutException;
@@ -16,11 +17,14 @@ public class Main extends PApplet {
     public int d = 5;
     public static int max;
     public static int[] temp;
+    PGraphics graphics;
 
     public void settings() {
-        fullScreen(P2D, SPAN);
+        fullScreen(P2D, 1);
         windowRatio(1280,720);
         size(displayWidth, displayHeight, P2D);
+        graphics = new PGraphics();
+        this.g = graphics;
         background(0);
         utils = new Utils();
         utils.sysInfo();
