@@ -35,7 +35,6 @@
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
-
     <dependencies>
         <dependency>
             <groupId>com.github.micycle1</groupId>
@@ -103,15 +102,22 @@
             <artifactId>gst1-java-fx</artifactId>
             <version>0.9.0</version>
         </dependency>
-    </dependencies>
-    <plugins>
-        <plugin>
+        <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <configuration>
-                <skipTests>${skipTests}</skipTests>
-            </configuration>
-        </plugin>
-
-    </plugins>
+            <version>3.5.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <skipTests>${skipTests}</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
