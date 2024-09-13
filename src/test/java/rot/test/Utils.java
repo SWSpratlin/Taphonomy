@@ -1,6 +1,8 @@
 package rot.test;
 
 import java.awt.*;
+import java.lang.management.ManagementFactory;
+import java.lang.management.RuntimeMXBean;
 import java.util.HashMap;
 
 public class Utils {
@@ -10,6 +12,7 @@ public class Utils {
     public static String[] opacity;
     public static String osName;
     public static String osArch;
+
 
     public Utils() {
         runtime = Runtime.getRuntime();
@@ -185,7 +188,7 @@ public class Utils {
         return output;
     }
 
-    public static HashMap coordArray(int w, int h) {
+    public static HashMap<Integer,Point> coordArray(int w, int h) {
         HashMap<Integer, Point> coords = new HashMap<Integer, Point>(w * h);
         for (int y = 0; y < h; y++) {
             for (int x = 0; x < w; x++) {
@@ -194,5 +197,32 @@ public class Utils {
             }
         }
         return coords;
+    }
+
+    private static int seconds = 0;
+    private static int minutes = 0;
+    private static int hours = 0;
+    private static long lastTimeCounter = 0;
+    private static final RuntimeMXBean up = ManagementFactory.getRuntimeMXBean();
+
+    public static String uptime() {
+        long timeCounter = up.getUptime()/ 1000;
+        if (timeCounter != lastTimeCounter) {
+            lastTimeCounter = timeCounter;
+            seconds++;
+            if (seconds >= 60) {
+                minutes++;
+                if (seconds == 60){
+                    seconds = 0;
+                }
+                if (minutes >= 60){
+                    hours++;
+                    if (minutes == 60){
+                        minutes = 0;
+                    }
+                }
+            }
+        }
+        return hours + ":" + minutes + ":" + seconds;
     }
 }

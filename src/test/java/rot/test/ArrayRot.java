@@ -6,6 +6,7 @@ import processing.core.PImage;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class ArrayRot {
     /**
@@ -226,7 +227,7 @@ public class ArrayRot {
     private void scan(int index) {
         // Comb through the hex array and look for matches. Update the pXp array with each match.
         pXp[index] = hexSearch(img.pixels[index]);
-        if (pXp[index] > oThresh) this.updateSet(index);
+        if (pXp[index] > oThresh) this.randSet(index);
 
     }
 
@@ -254,8 +255,38 @@ public class ArrayRot {
         if (index + (width * 2) < max) updater[index + (width * 2)] = true;
         if ((index + (width * 2) - 1) < max) updater[index + (width * 2) - 1] = true;
         if ((index + (width * 2) + 1) < max) updater[index + (width * 2) + 1] = true;
-
     }
+
+    private void randSet(int index) {
+        int width = s.rwidth;
+        int[] u = new int[17];
+        u[0] = index - 1;
+        u[1] = index - 2;
+        u[2] = index - width;
+        u[3] = index - width - 1;
+        u[4] = index - (width * 2);
+        u[5] = index - (width - 1);
+        u[6] = index - width + 1;
+        u[7] = index - (width * 2) - 1;
+        u[8] = index - (width * 2) + 1;
+        u[9] = index + 1;
+        u[10] = index + 2;
+        u[11] = index + width;
+        u[12] = index + width + 1;
+        u[13] = index + width - 1;
+        u[14] = index + (width * 2) - 1;
+        u[15] = index + (width * 2) + 1;
+        u[16] = index + (width * 2);
+        for (int i = 0; i < 6; i++) {
+            int random = (int)s.random(u.length);
+            if (u[random] > 0 && u[random] < max) {
+                if (!updater[u[random]]) {
+                    updater[u[random]] = true;
+                }
+            }
+        }
+    }
+
 
     private Integer colorStep(Integer current) {
         int step = current + 1;

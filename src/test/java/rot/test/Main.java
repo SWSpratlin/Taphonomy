@@ -46,7 +46,7 @@ public class Main extends PApplet {
         Arrays.fill(a.pixels, 0xFF000000);
 
         bg = loadImage("data/Taphonomy.jpg");
-        map = loadImage("data/rot_map.png");
+        map = loadImage("data/Rot_Alpha.png");
         map.loadPixels();
         System.out.println("Map Loaded");
         rot = new ArrayRot(this, a, map);
@@ -94,7 +94,7 @@ public class Main extends PApplet {
         rect(0, 0, 500, 200);
         textSize(30);
         fill(255);
-        text("Cam Framerate: " + CamHandler.cam.getFPS(), 40, 40);
+        text("Uptime: " + Utils.uptime(), 40, 50);
         text("Framerate: " + frameRate, 40, 100);
         text("Pixel Value: " + Integer.toHexString(a.pixels[rmouseX + rmouseY * rwidth]), 40, 150);
         text("Cam Pixel Value: " + Integer.toHexString(temp[rmouseX + rmouseY * rwidth])
