@@ -32,12 +32,20 @@ Stay Tuned
 
 Features still working on
 
-- [ ] Fullscreen
-- [ ] Pi Functionality
-- [ ] JavaCV Functionality
-- [ ] JavaCPP Build within Pi Environment
-- [ ] Config Handler to run the first time on the machine to choose image files.
+- [X] Fullscreen
+- [X] Pi Functionality
+- [X] GStreamer Integration
+- [X] Config Handler to run the first time on the machine to choose image files.
+- [ ] Windows Driver
+- [ ] In-program declaration of Auto-shudown
+- [ ] 
 
 ## ChangeLog: 
 
-9/1 -  Switch to JavaCV Library. Still not fully functional.
+1.0 FIRST STABLE VERSION
+    - GStreamer Integration, Fullscreen capabilities, switch to a new source for Processing
+    - New updater algorithm using a pseudo-random updater set. Grows slower, but more circular
+    - Cleaned up test-cases
+    - Added Uptime counter to Utils
+
+0.2.0 -  Switch to JavaCV Library. Still not fully functional.
