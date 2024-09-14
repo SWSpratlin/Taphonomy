@@ -102,7 +102,7 @@ public class Main extends PApplet {
         textSize(10);
         fill(255);
         text("Uptime: " + Utils.uptime(), 40, 50);
-        Utils.printMemory(frameCount, 600);
+        text("Main Class", 40, 75);
     }
 
     //standard runSketch main method

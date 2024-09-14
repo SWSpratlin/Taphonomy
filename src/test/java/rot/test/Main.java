@@ -95,7 +95,7 @@ public class Main extends PApplet {
         textSize(10);
         fill(255);
         text("Uptime: " + Utils.uptime(), 40, 50);
-//        text("Framerate: " + frameRate, 40, 100);
+        text("Test Class", 40, 100);
 //        text("Pixel Value: " + Integer.toHexString(a.pixels[rmouseX + rmouseY * rwidth]), 40, 150);
 //        text("Cam Pixel Value: " + Integer.toHexString(temp[rmouseX + rmouseY * rwidth])
 //                + " int: " + temp[rmouseX + rmouseY * rwidth], 40, 200);
