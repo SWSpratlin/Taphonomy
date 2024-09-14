@@ -12,7 +12,7 @@ public class Utils {
     public static String[] opacity;
     public static String osName;
     public static String osArch;
-
+    private static final RuntimeMXBean up = ManagementFactory.getRuntimeMXBean();
 
     public Utils() {
         runtime = Runtime.getRuntime();
@@ -44,11 +44,10 @@ public class Utils {
      * Utility to easily log memory usage for sketches. Not necessary for deployment,
      * but helpful for optimization.
      *
-     * @param frameCount usually "frameCount" if used in a Processing sketch. Whatever frame counter/refresh counter you have
      * @param increment  how often you want to update
      */
-    public static void printMemory(int frameCount, int increment) {
-        if (frameCount % increment == 0) {
+    public static void printMemory(int increment) {
+        if (up.getUptime()/1000 % increment == 0) {
             long memory = runtime.totalMemory() - runtime.freeMemory();
             System.out.println("Used memory in bytes: " + memory);
             System.out.println("Used memory in megabytes: " + bytesToMegabytes(memory));
@@ -222,7 +221,7 @@ public class Utils {
     private static int minutes = 0;
     private static int hours = 0;
     private static long lastTimeCounter = 0;
-    private static final RuntimeMXBean up = ManagementFactory.getRuntimeMXBean();
+
 
     public static String uptime() {
         long timeCounter = up.getUptime()/ 1000;
