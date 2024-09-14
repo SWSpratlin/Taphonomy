@@ -3,8 +3,6 @@ package rot.main;
 import processing.core.PApplet;
 import processing.core.PGraphics;
 import processing.core.PImage;
-
-import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.concurrent.TimeoutException;
 
