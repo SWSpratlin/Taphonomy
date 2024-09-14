@@ -108,10 +108,6 @@ public class Main extends PApplet {
 
     //standard runSketch main method
     public static void main(String[] args) {
-        if (System.getProperty("os.name").toLowerCase().contains("linux")) {
-            System.setProperty("java.library.path", "/usr/java/packages/lib/");
-            System.out.println(System.getProperty("java.library.path"));
-        }
         String[] processingArgs = {"Main"};
         rot.main.Main main = new rot.main.Main();
         PApplet.runSketch(processingArgs, main);
