@@ -1,12 +1,11 @@
 # TAPHONOMY (A Digital Interactive Installation)
 
-This is a testing Ground for "The Rot" (Working Title) using the Sarxos Webcam Capture library. This mostly works. 
-
-Currently running successfully on MacM1 (Multiple Stations) 
+An Interactive Installation in collaboration with the Caps Lock Collective. 
+Runs in a stable form on Mac (Silicon and Intel) and Linux (Debian Bookworm ONLY). 
 
 Current Problems:
 
-- Importinc processing.core on Pi via Terminal. 
+- Importinc processing.core on Pi via Terminal outside of a rc.local startup script. 
 
 To run, follow these steps based on Platform
 
