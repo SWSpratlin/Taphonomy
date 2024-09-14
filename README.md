@@ -1,4 +1,4 @@
-# TAPHONOMY (A Digital Interactive Installation) Testing Grounds
+# TAPHONOMY (A Digital Interactive Installation)
 
 This is a testing Ground for "The Rot" (Working Title) using the Sarxos Webcam Capture library. This mostly works. 
 
