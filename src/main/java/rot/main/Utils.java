@@ -2,20 +2,22 @@ package rot.main;
 
 import java.awt.*;
 import java.lang.management.ManagementFactory;
+import java.lang.management.MemoryUsage;
 import java.lang.management.RuntimeMXBean;
+import java.lang.management.MemoryMXBean;
 import java.util.HashMap;
 
 public class Utils {
 
     private static final long MEGABYTE = 1024L * 1024L;
-    private static Runtime runtime;
+    private static final MemoryMXBean runtime = ManagementFactory.getMemoryMXBean();
+    public static MemoryUsage memory = runtime.getHeapMemoryUsage();
     public static String[] opacity;
     public static String osName;
     public static String osArch;
     private static final RuntimeMXBean up = ManagementFactory.getRuntimeMXBean();
 
     public Utils() {
-        runtime = Runtime.getRuntime();
         opacityArray();
     }
 
@@ -25,7 +27,7 @@ public class Utils {
      *
      * @return String that gives the OS name, and Chip architecture (silicon vs Intel).
      */
-    public static  String sysInfo() {
+    public static String sysInfo() {
         osName = System.getProperty("os.name").toLowerCase();
         osArch = System.getProperty("os.arch").toLowerCase();
         if (osName.contains("mac") && osArch.contains("aarch64")) {
@@ -43,15 +45,11 @@ public class Utils {
     /**
      * Utility to easily log memory usage for sketches. Not necessary for deployment,
      * but helpful for optimization.
-     *
-     * @param increment  how often you want to update
      */
-    public static void printMemory(int increment) {
-        if (up.getUptime()/1000 % increment == 0) {
-            long memory = runtime.totalMemory() - runtime.freeMemory();
-            System.out.println("Used memory in bytes: " + memory);
-            System.out.println("Used memory in megabytes: " + bytesToMegabytes(memory));
-        }
+    private static void printMemory() {
+        long used = memory.getUsed();
+        System.out.println("Used memory in bytes: " + used);
+        System.out.println("Used memory in megabytes: " + bytesToMegabytes(used));
     }
 
     private static long bytesToMegabytes(long bytes) {
@@ -170,8 +168,9 @@ public class Utils {
 
     /**
      * Method to convert opacity array values to color data for use in BufferedImage or PImage
+     *
      * @param alpha the desired opacity
-     * @param i the current color converted to a hex string
+     * @param i     the current color converted to a hex string
      * @return color data in the 0xAARRGGBB format
      */
     public static int convertToAlphaHex(int alpha, int i) {
@@ -181,8 +180,9 @@ public class Utils {
 
     /**
      * Used to create a 1D array that corresponds with the pixel positions of a horizontally flipped image.
-     * @param w width of the image to flip
-     * @param h height of the image to flip
+     *
+     * @param w      width of the image to flip
+     * @param h      height of the image to flip
      * @param output the array to store these new values. Usually a reference array. Can be FINAL
      * @return a populated 1D array of a horizonally flipped version of whatever image.
      */
@@ -199,11 +199,12 @@ public class Utils {
 
     /**
      * Creates a hash map for coordinates to use with BufferedImage or any other 2D image handling
+     *
      * @param w Width of the image
      * @param h Height of the image
      * @return A Hash Map containing every 1D pixel value, and its corresponding coordinates.
      */
-    public static HashMap<Integer,Point> coordArray(int w, int h) {
+    public static HashMap<Integer, Point> coordArray(int w, int h) {
         HashMap<Integer, Point> coords = new HashMap<Integer, Point>(w * h);
         for (int y = 0; y < h; y++) {
             for (int x = 0; x < w; x++) {
@@ -217,25 +218,27 @@ public class Utils {
     /**
      * Uptime counter.
      */
-    private static int seconds = 0;
+    private static int seconds = 50;
     private static int minutes = 0;
     private static int hours = 0;
     private static long lastTimeCounter = 0;
 
 
     public static String uptime() {
-        long timeCounter = up.getUptime()/ 1000;
+        long timeCounter = up.getUptime() / 1000;
         if (timeCounter != lastTimeCounter) {
             lastTimeCounter = timeCounter;
             seconds++;
             if (seconds >= 60) {
                 minutes++;
-                if (seconds == 60){
+                printMemory();
+                System.out.println("Total Memory: " + bytesToMegabytes(memory.getCommitted()) + ", Init Memory: " + bytesToMegabytes(memory.getInit()));
+                if (seconds == 60) {
                     seconds = 0;
                 }
-                if (minutes >= 60){
+                if (minutes >= 60) {
                     hours++;
-                    if (minutes == 60){
+                    if (minutes == 60) {
                         minutes = 0;
                     }
                 }
