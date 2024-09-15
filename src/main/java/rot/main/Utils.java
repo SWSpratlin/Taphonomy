@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class Utils {
 
     private static final long MEGABYTE = 1024L * 1024L;
-    private static final MemoryMXBean runtime = ManagementFactory.getMemoryMXBean();
+    private static MemoryMXBean runtime = ManagementFactory.getMemoryMXBean();
     public static MemoryUsage memory = runtime.getHeapMemoryUsage();
     public static String[] opacity;
     public static String osName;
@@ -47,6 +47,7 @@ public class Utils {
      * but helpful for optimization.
      */
     private static void printMemory() {
+        memory = runtime.getHeapMemoryUsage();
         long used = memory.getUsed();
         System.out.println("Used memory in bytes: " + used);
         System.out.println("Used memory in megabytes: " + bytesToMegabytes(used));
