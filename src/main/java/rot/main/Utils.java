@@ -224,7 +224,6 @@ public class Utils {
     private static int hours = 0;
     private static long lastTimeCounter = 0;
 
-
     public static String uptime() {
         long timeCounter = up.getUptime() / 1000;
         if (timeCounter != lastTimeCounter) {

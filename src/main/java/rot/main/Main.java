@@ -103,6 +103,10 @@ public class Main extends PApplet {
         fill(255);
         text("Uptime: " + Utils.uptime(), 40, 50);
         text("Main Class", 40, 75);
+
+        if(frameCount % 2000 == 0){
+            System.out.println(Utils.uptime());
+        }
     }
 
     //standard runSketch main method
