@@ -24,9 +24,9 @@ public class Main extends PApplet {
     public void settings() {
 
         //Administrative setup
-        //fullScreen(P2D);
+        fullScreen(P2D);
         windowRatio(1280,720);
-        size(1280, 720, P2D);
+        size(displayWidth, displayHeight, P2D);
         graphics = new PGraphics();
         this.g = graphics;
         background(0);
