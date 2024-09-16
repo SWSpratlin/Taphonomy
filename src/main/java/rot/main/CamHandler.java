@@ -34,9 +34,7 @@ public class CamHandler {
 
         // Creates an array that stores the reverse values of a single Width
         flip = new int[w * h];
-        System.out.println(flip.length);
         Utils.flipImageArray(w, h, flip);
-        System.out.println(flip.length);
     }
 
 
