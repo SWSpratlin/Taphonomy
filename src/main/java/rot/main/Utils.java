@@ -1,11 +1,16 @@
 package rot.main;
 
 import java.awt.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryUsage;
 import java.lang.management.RuntimeMXBean;
 import java.lang.management.MemoryMXBean;
 import java.util.HashMap;
+
 
 public class Utils {
 
@@ -40,6 +45,23 @@ public class Utils {
             return "Windows";
         }
         return "No Compatible OS";
+    }
+
+    private static ProcessBuilder p = new ProcessBuilder();
+    public static void getPiTemp() throws IOException, InterruptedException {
+       if (sysInfo().contains("Silicon")) {
+           p.command("echo", "$JAVA_HOME");
+       } else if (sysInfo().contains("Pi")) {
+           p.command("sudo", "vcgencmd", "measure_temp");
+       }
+        p.redirectErrorStream(true);
+        Process pr = p.start();
+        InputStream in = pr.getInputStream();
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
     }
 
     /**
@@ -219,7 +241,7 @@ public class Utils {
      * Uptime counter.
      */
     private static int seconds = 50;
-    private static int minutes = 0;
+    private static int minutes = 4;
     private static int hours = 0;
     private static long lastTimeCounter = 0;
 
@@ -231,8 +253,13 @@ public class Utils {
             seconds++;
             if (seconds >= 60) {
                 minutes++;
-                printMemory();
-                System.out.println("Total Memory: " + bytesToMegabytes(memory.getCommitted()) + ", Init Memory: " + bytesToMegabytes(memory.getInit()));
+                if (minutes % 5 == 0){
+                    try {
+                        getPiTemp();
+                    } catch (IOException | InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
                 if (seconds == 60) {
                     seconds = 0;
                 }
