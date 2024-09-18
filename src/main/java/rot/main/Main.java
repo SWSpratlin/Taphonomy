@@ -66,10 +66,12 @@ public class Main extends PApplet {
         //Holder array for calling the camera image.
         temp = new int[max];
 
-        if (Utils.osName.contains("Silicon")){
+        if (Utils.osName.contains("silicon")){
             d = 10;
-        } else if (Utils.osName.contains("Pi")){
-            d = 6;
+        } else if (Utils.osName.contains("linux")){
+            d = 5;
+        } else {
+            d = 8;
         }
     }
 
