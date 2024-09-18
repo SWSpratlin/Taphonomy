@@ -14,7 +14,7 @@ public class Main extends PApplet {
     public static PImage map;
     public static CamHandler handler;
     public static ArrayRot rot;
-    public int d = 5;
+    public int d = 10;
     public static int max;
     public static int[] temp;
     PGraphics graphics;
