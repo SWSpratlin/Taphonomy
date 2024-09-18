@@ -253,9 +253,10 @@ public class Utils {
             seconds++;
             if (seconds >= 60) {
                 minutes++;
-                if (minutes % 5 == 0){
+                if (minutes % 3 == 0){
                     try {
                         getPiTemp();
+                        printMemory();
                     } catch (IOException | InterruptedException e) {
                         e.printStackTrace();
                     }
