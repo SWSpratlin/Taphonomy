@@ -14,7 +14,7 @@ public class Main extends PApplet {
     public static PImage map;
     public static CamHandler handler;
     public static ArrayRot rot;
-    public int d = 10;
+    public int d = 0;
     public static int max;
     public static int[] temp;
     PGraphics graphics;
@@ -65,6 +65,12 @@ public class Main extends PApplet {
 
         //Holder array for calling the camera image.
         temp = new int[max];
+
+        if (Utils.osName.contains("Silicon")){
+            d = 10;
+        } else if (Utils.osName.contains("Pi")){
+            d = 6;
+        }
     }
 
     public void draw() {
