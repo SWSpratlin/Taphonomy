@@ -1,20 +1,20 @@
 OS and Arch is: Linux / Pi
 Pi Driver loaded
 0: /dev/video20
-1: /dev/video21
-2: /dev/video22
-3: /dev/video23
-4: /dev/video24
-5: /dev/video25
-6: /dev/video26
-7: /dev/video27
-8: /dev/video28
-9: /dev/video29
-10: /dev/video30
-11: /dev/video31
-12: /dev/video32
-13: /dev/video33
-14: /dev/video19
+1: /dev/video19
+2: /dev/video21
+3: /dev/video22
+4: /dev/video23
+5: /dev/video24
+6: /dev/video25
+7: /dev/video26
+8: /dev/video27
+9: /dev/video28
+10: /dev/video29
+11: /dev/video30
+12: /dev/video31
+13: /dev/video32
+14: /dev/video33
 15: /dev/video34
 16: /dev/video35
 17: /dev/video0
@@ -30,1222 +30,843 @@ HexArray Loaded
 Map1: ffffffff Map2: ffffffff Walked 3: ff000000
 Cam: /dev/video20
 Cam Size: 1280, 720
-temp=32.9'C
-Used memory in bytes: 60709568
-Used memory in megabytes: 57
+temp=31.2'C
+Used memory in bytes: 80865864
+Used memory in megabytes: 77
 0:6:50
-0:8:41
-temp=37.3'C
-Used memory in bytes: 115561152
-Used memory in megabytes: 110
-0:10:34
-temp=41.7'C
-Used memory in bytes: 111612424
-Used memory in megabytes: 106
-0:12:24
-0:14:14
-temp=44.4'C
-Used memory in bytes: 65727384
-Used memory in megabytes: 62
-0:16:4
-0:17:54
-temp=46.1'C
-Used memory in bytes: 86958088
-Used memory in megabytes: 82
-0:19:44
-temp=48.3'C
-Used memory in bytes: 74615728
-Used memory in megabytes: 71
-0:21:34
-0:23:24
-temp=48.3'C
-Used memory in bytes: 95832632
-Used memory in megabytes: 91
-0:25:14
-temp=49.4'C
-Used memory in bytes: 57301424
-Used memory in megabytes: 54
-0:27:4
-0:28:54
-temp=48.8'C
-Used memory in bytes: 79585848
-Used memory in megabytes: 75
-0:30:44
-0:32:34
-temp=51.0'C
-Used memory in bytes: 57808304
-Used memory in megabytes: 55
-0:34:24
-temp=51.0'C
-Used memory in bytes: 84274096
-Used memory in megabytes: 80
-0:36:14
-0:38:4
-temp=51.0'C
-Used memory in bytes: 67750832
-Used memory in megabytes: 64
-0:39:54
-0:41:44
-temp=49.9'C
-Used memory in bytes: 109945728
-Used memory in megabytes: 104
-0:43:34
-temp=50.5'C
-Used memory in bytes: 93407488
-Used memory in megabytes: 89
-0:45:24
-0:47:14
-temp=51.6'C
-Used memory in bytes: 72684416
-Used memory in megabytes: 69
-0:49:4
-0:50:54
-temp=50.5'C
-Used memory in bytes: 110678960
-Used memory in megabytes: 105
-0:52:44
-temp=51.6'C
-Used memory in bytes: 89954224
+0:8:43
+temp=34.0'C
+Used memory in bytes: 89591776
 Used memory in megabytes: 85
-0:54:34
-0:56:24
-temp=52.7'C
-Used memory in bytes: 65050168
-Used memory in megabytes: 62
-0:58:14
-temp=52.7'C
-Used memory in bytes: 107233336
-Used memory in megabytes: 102
-1:0:4
-1:1:54
-temp=51.6'C
-Used memory in bytes: 82310064
-Used memory in megabytes: 78
-1:3:44
-1:5:34
-temp=51.0'C
-Used memory in bytes: 111920184
-Used memory in megabytes: 106
-1:7:24
-temp=51.0'C
-Used memory in bytes: 95393712
-Used memory in megabytes: 90
-1:9:14
-1:11:4
-temp=52.1'C
-Used memory in bytes: 91439760
-Used memory in megabytes: 87
-1:12:54
-1:14:44
-temp=52.1'C
-Used memory in bytes: 61278352
-Used memory in megabytes: 58
-1:16:34
-temp=51.0'C
-Used memory in bytes: 100316816
-Used memory in megabytes: 95
-1:18:24
-1:20:14
-temp=52.1'C
-Used memory in bytes: 79590544
-Used memory in megabytes: 75
-1:22:4
-1:23:54
-temp=52.1'C
-Used memory in bytes: 67252880
-Used memory in megabytes: 64
-1:25:44
-temp=52.7'C
-Used memory in bytes: 101056480
-Used memory in megabytes: 96
-1:27:34
-1:29:24
-temp=53.8'C
-Used memory in bytes: 76145024
-Used memory in megabytes: 72
-1:31:14
-temp=51.6'C
-Used memory in bytes: 114127840
-Used memory in megabytes: 108
-1:33:4
-1:34:54
-temp=53.2'C
-Used memory in bytes: 93403104
-Used memory in megabytes: 89
-1:36:44
-1:38:34
-temp=52.7'C
-Used memory in bytes: 72670176
+0:10:33
+temp=39.5'C
+Used memory in bytes: 73064088
 Used memory in megabytes: 69
-1:40:24
-temp=53.2'C
-Used memory in bytes: 106469992
-Used memory in megabytes: 101
-1:42:14
-1:44:4
-temp=53.8'C
-Used memory in bytes: 81551976
-Used memory in megabytes: 77
-1:45:54
-1:47:44
-temp=53.2'C
-Used memory in bytes: 115390096
-Used memory in megabytes: 110
-1:49:34
-temp=52.1'C
-Used memory in bytes: 98858128
-Used memory in megabytes: 94
-1:51:24
-1:53:14
-temp=52.7'C
-Used memory in bytes: 82324112
-Used memory in megabytes: 78
-1:55:4
-1:56:54
-temp=52.1'C
-Used memory in bytes: 64759952
-Used memory in megabytes: 61
-1:58:44
-temp=51.6'C
-Used memory in bytes: 107995104
-Used memory in megabytes: 102
-2:0:34
-2:2:24
-temp=53.8'C
-Used memory in bytes: 65257328
-Used memory in megabytes: 62
-2:4:14
-temp=52.1'C
-Used memory in bytes: 79141568
-Used memory in megabytes: 75
-2:6:4
-2:7:54
-temp=54.3'C
-Used memory in bytes: 75192512
-Used memory in megabytes: 71
-2:9:44
-2:11:34
-temp=53.2'C
-Used memory in bytes: 79636160
-Used memory in megabytes: 75
-2:13:24
-temp=53.2'C
-Used memory in bytes: 88277984
-Used memory in megabytes: 84
-2:15:14
-2:17:4
-temp=53.8'C
-Used memory in bytes: 88520672
-Used memory in megabytes: 84
-2:18:54
-2:20:44
-temp=54.3'C
-Used memory in bytes: 71994336
-Used memory in megabytes: 68
-2:22:36
-temp=52.1'C
-Used memory in bytes: 89022432
-Used memory in megabytes: 84
-2:24:27
-2:26:17
-temp=51.6'C
-Used memory in bytes: 80884192
-Used memory in megabytes: 77
-2:28:7
-2:29:57
-temp=53.8'C
-Used memory in bytes: 85319536
-Used memory in megabytes: 81
-2:31:47
-temp=53.2'C
-Used memory in bytes: 93955736
-Used memory in megabytes: 89
-2:33:37
-2:35:28
-temp=54.3'C
-Used memory in bytes: 67978392
-Used memory in megabytes: 64
-2:37:18
-temp=53.2'C
-Used memory in bytes: 73461104
+0:12:24
+0:14:19
+temp=39.5'C
+Used memory in bytes: 56532120
+Used memory in megabytes: 53
+0:16:10
+temp=42.2'C
+Used memory in bytes: 73550192
 Used memory in megabytes: 70
-2:39:8
-2:40:58
-temp=52.7'C
-Used memory in bytes: 77898432
-Used memory in megabytes: 74
-2:42:48
-2:44:38
-temp=53.2'C
-Used memory in bytes: 82342656
-Used memory in megabytes: 78
-2:46:28
-temp=53.8'C
-Used memory in bytes: 90971328
-Used memory in megabytes: 86
-2:48:18
-2:50:8
-temp=53.8'C
-Used memory in bytes: 82815904
-Used memory in megabytes: 78
-2:51:58
-2:53:48
-temp=53.2'C
-Used memory in bytes: 99833872
-Used memory in megabytes: 95
-2:55:38
-temp=53.8'C
-Used memory in bytes: 112662032
-Used memory in megabytes: 107
-2:57:28
-2:59:18
-temp=53.2'C
-Used memory in bytes: 112905232
-Used memory in megabytes: 107
-3:1:8
-3:2:58
-temp=53.8'C
-Used memory in bytes: 83788192
+0:18:2
+0:19:53
+temp=45.0'C
+Used memory in bytes: 98963424
+Used memory in megabytes: 94
+0:21:45
+0:23:37
+temp=44.4'C
+Used memory in bytes: 65650080
+Used memory in megabytes: 62
+0:25:29
+temp=45.5'C
+Used memory in bytes: 83730112
 Used memory in megabytes: 79
-3:4:48
-temp=53.2'C
-Used memory in bytes: 79850912
-Used memory in megabytes: 76
-3:6:38
-3:8:28
-temp=53.2'C
-Used memory in bytes: 92687376
-Used memory in megabytes: 88
-3:10:18
-temp=54.3'C
-Used memory in bytes: 105523792
-Used memory in megabytes: 100
-3:12:8
-3:13:58
-temp=53.2'C
-Used memory in bytes: 114153488
-Used memory in megabytes: 108
-3:15:48
-3:17:38
-temp=52.1'C
-Used memory in bytes: 76657680
-Used memory in megabytes: 73
-3:19:28
-temp=53.8'C
-Used memory in bytes: 85288864
-Used memory in megabytes: 81
-3:21:18
-3:23:8
-temp=53.2'C
-Used memory in bytes: 98126864
-Used memory in megabytes: 93
-3:24:58
-3:26:48
-temp=54.3'C
-Used memory in bytes: 106760608
-Used memory in megabytes: 101
-3:28:38
-temp=54.3'C
-Used memory in bytes: 72466560
-Used memory in megabytes: 69
-3:30:28
-3:32:18
-temp=52.7'C
-Used memory in bytes: 86341136
-Used memory in megabytes: 82
-3:34:8
-3:35:58
-temp=52.7'C
-Used memory in bytes: 90782736
-Used memory in megabytes: 86
-3:37:48
-temp=53.8'C
-Used memory in bytes: 99406240
-Used memory in megabytes: 94
-3:39:38
-3:41:28
-temp=53.2'C
-Used memory in bytes: 112240480
-Used memory in megabytes: 107
-3:43:18
-temp=53.2'C
-Used memory in bytes: 104105296
-Used memory in megabytes: 99
-3:45:8
-3:46:58
-temp=54.3'C
-Used memory in bytes: 100162384
-Used memory in megabytes: 95
-3:48:48
-3:50:38
-temp=53.8'C
-Used memory in bytes: 100417872
-Used memory in megabytes: 95
-3:52:28
-temp=52.7'C
-Used memory in bytes: 96478544
-Used memory in megabytes: 92
-3:54:18
-3:56:8
-temp=54.3'C
-Used memory in bytes: 88332640
+0:27:21
+0:29:12
+temp=45.5'C
+Used memory in bytes: 82920128
+Used memory in megabytes: 79
+0:31:4
+0:32:55
+temp=45.0'C
+Used memory in bytes: 91549376
+Used memory in megabytes: 87
+0:34:47
+temp=46.6'C
+Used memory in bytes: 91794112
+Used memory in megabytes: 87
+0:36:38
+0:38:30
+temp=45.5'C
+Used memory in bytes: 92047840
+Used memory in megabytes: 87
+0:40:21
+temp=45.0'C
+Used memory in bytes: 88095424
 Used memory in megabytes: 84
-3:57:58
-3:59:48
-temp=53.2'C
-Used memory in bytes: 74941776
-Used memory in megabytes: 71
-4:1:38
-temp=53.2'C
-Used memory in bytes: 113991520
-Used memory in megabytes: 108
-4:3:28
-4:5:18
-temp=53.8'C
-Used memory in bytes: 114249072
-Used memory in megabytes: 108
-4:7:8
-4:8:58
-temp=53.8'C
-Used memory in bytes: 114512208
-Used memory in megabytes: 109
-4:10:48
-temp=56.0'C
-Used memory in bytes: 106383200
-Used memory in megabytes: 101
-4:12:38
-4:14:28
-temp=54.3'C
-Used memory in bytes: 110832992
-Used memory in megabytes: 105
-4:16:18
-temp=54.9'C
-Used memory in bytes: 111090512
-Used memory in megabytes: 105
-4:18:8
-4:19:58
-temp=54.9'C
-Used memory in bytes: 107162464
-Used memory in megabytes: 102
-4:21:48
-4:23:38
-temp=54.3'C
-Used memory in bytes: 94835024
-Used memory in megabytes: 90
-4:25:28
-temp=54.3'C
-Used memory in bytes: 95088480
-Used memory in megabytes: 90
-4:27:18
-4:29:8
-temp=53.2'C
-Used memory in bytes: 95346016
-Used memory in megabytes: 90
-4:30:58
-4:32:48
-temp=54.3'C
-Used memory in bytes: 87214384
-Used memory in megabytes: 83
-4:34:38
-temp=54.9'C
-Used memory in bytes: 95862064
-Used memory in megabytes: 91
-4:36:28
-4:38:18
-temp=52.7'C
-Used memory in bytes: 78287680
-Used memory in megabytes: 74
-4:40:8
-4:41:58
-temp=54.9'C
-Used memory in bytes: 87978288
-Used memory in megabytes: 83
-4:43:48
-temp=54.3'C
-Used memory in bytes: 100822320
+0:42:13
+0:44:8
+temp=47.2'C
+Used memory in bytes: 105124720
+Used memory in megabytes: 100
+0:46:0
+0:47:51
+temp=45.5'C
+Used memory in bytes: 67623280
+Used memory in megabytes: 64
+0:49:43
+temp=46.1'C
+Used memory in bytes: 80451736
+Used memory in megabytes: 76
+0:51:35
+0:53:28
+temp=47.2'C
+Used memory in bytes: 101661888
 Used memory in megabytes: 96
-4:45:38
-4:47:28
-temp=53.8'C
-Used memory in bytes: 84300592
-Used memory in megabytes: 80
-4:49:18
-temp=53.2'C
-Used memory in bytes: 105533248
-Used memory in megabytes: 100
-4:51:8
-4:52:58
-temp=53.2'C
-Used memory in bytes: 89015616
-Used memory in megabytes: 84
-4:54:48
-4:56:38
-temp=53.2'C
-Used memory in bytes: 106050880
-Used memory in megabytes: 101
-4:58:28
-temp=53.2'C
-Used memory in bytes: 85347136
-Used memory in megabytes: 81
-5:0:18
-5:2:8
-temp=54.9'C
-Used memory in bytes: 98189632
-Used memory in megabytes: 93
-5:3:58
-5:5:48
-temp=53.2'C
-Used memory in bytes: 80617280
-Used memory in megabytes: 76
-5:7:38
-temp=56.0'C
-Used memory in bytes: 98698560
-Used memory in megabytes: 94
-5:9:28
-5:11:18
-temp=53.8'C
-Used memory in bytes: 115732800
-Used memory in megabytes: 110
-5:13:8
-5:14:58
-temp=56.0'C
-Used memory in bytes: 99219280
-Used memory in megabytes: 94
-5:16:48
-temp=53.8'C
-Used memory in bytes: 81646896
+0:55:21
+temp=46.6'C
+Used memory in bytes: 80954896
 Used memory in megabytes: 77
-5:18:38
-5:20:28
-temp=54.9'C
-Used memory in bytes: 103916832
-Used memory in megabytes: 99
-5:22:18
-temp=55.4'C
-Used memory in bytes: 87397168
-Used memory in megabytes: 83
-5:24:8
-5:25:58
-temp=54.9'C
-Used memory in bytes: 112818464
-Used memory in megabytes: 107
-5:27:48
-5:29:38
-temp=52.7'C
-Used memory in bytes: 104689440
-Used memory in megabytes: 99
-5:31:29
-temp=54.3'C
-Used memory in bytes: 104950560
-Used memory in megabytes: 100
-5:33:23
-5:35:23
-temp=54.9'C
-Used memory in bytes: 83199264
-Used memory in megabytes: 79
-5:37:27
-temp=52.7'C
-Used memory in bytes: 97094960
-Used memory in megabytes: 92
-5:39:20
-5:41:10
-temp=53.2'C
-Used memory in bytes: 114146096
-Used memory in megabytes: 108
-5:43:0
-5:44:50
-temp=53.8'C
-Used memory in bytes: 101819168
-Used memory in megabytes: 97
-5:46:40
-temp=53.8'C
-Used memory in bytes: 110470960
-Used memory in megabytes: 105
-5:48:30
-5:50:20
-temp=53.8'C
-Used memory in bytes: 106530096
-Used memory in megabytes: 101
-5:52:10
-temp=53.2'C
-Used memory in bytes: 98401072
-Used memory in megabytes: 93
-5:54:0
-5:55:50
-temp=53.8'C
-Used memory in bytes: 85026608
-Used memory in megabytes: 81
-5:57:40
-5:59:30
-temp=53.2'C
-Used memory in bytes: 98925872
-Used memory in megabytes: 94
-6:1:20
-temp=52.1'C
-Used memory in bytes: 90802960
-Used memory in megabytes: 86
-6:3:10
-6:5:0
-temp=52.7'C
-Used memory in bytes: 112046368
-Used memory in megabytes: 106
-6:6:50
-6:8:40
-temp=52.7'C
-Used memory in bytes: 108109568
-Used memory in megabytes: 103
-6:10:30
-temp=52.1'C
-Used memory in bytes: 86353152
+0:57:13
+0:59:5
+temp=48.8'C
+Used memory in bytes: 68612912
+Used memory in megabytes: 65
+1:0:57
+1:2:49
+temp=48.3'C
+Used memory in bytes: 60477856
+Used memory in megabytes: 57
+1:4:41
+temp=46.6'C
+Used memory in bytes: 77504016
+Used memory in megabytes: 73
+1:6:35
+1:8:30
+temp=48.3'C
+Used memory in bytes: 86139920
 Used memory in megabytes: 82
-6:12:20
-6:14:10
-temp=52.7'C
-Used memory in bytes: 96060160
-Used memory in megabytes: 91
-6:16:0
-6:17:50
-temp=53.8'C
-Used memory in bytes: 108912896
-Used memory in megabytes: 103
-6:19:40
-temp=51.6'C
-Used memory in bytes: 99727104
-Used memory in megabytes: 95
-6:21:30
-6:23:20
-temp=53.2'C
-Used memory in bytes: 99996416
-Used memory in megabytes: 95
-6:25:10
-temp=52.1'C
-Used memory in bytes: 104454400
-Used memory in megabytes: 99
-6:27:0
-6:28:50
-temp=53.2'C
-Used memory in bytes: 113106688
-Used memory in megabytes: 107
-6:30:40
-6:32:30
-temp=53.8'C
-Used memory in bytes: 96595728
-Used memory in megabytes: 92
-6:34:20
-temp=53.8'C
-Used memory in bytes: 109442320
-Used memory in megabytes: 104
-6:36:10
-6:38:1
-temp=52.1'C
-Used memory in bytes: 109708544
-Used memory in megabytes: 104
-6:39:51
-6:41:42
-temp=52.7'C
-Used memory in bytes: 101591824
-Used memory in megabytes: 96
-6:43:32
-temp=52.7'C
-Used memory in bytes: 114444544
-Used memory in megabytes: 109
-6:45:22
-6:47:12
-temp=54.3'C
-Used memory in bytes: 93730576
-Used memory in megabytes: 89
-6:49:2
-6:50:52
-temp=51.0'C
-Used memory in bytes: 93979920
-Used memory in megabytes: 89
-6:52:42
-temp=52.7'C
-Used memory in bytes: 90258656
-Used memory in megabytes: 86
-6:54:32
-6:56:22
-temp=53.2'C
-Used memory in bytes: 94735584
-Used memory in megabytes: 90
-6:58:12
-temp=53.2'C
-Used memory in bytes: 95006944
-Used memory in megabytes: 90
-7:0:2
-7:1:52
-temp=52.7'C
-Used memory in bytes: 91078384
-Used memory in megabytes: 86
-7:3:42
-7:5:32
-temp=53.2'C
-Used memory in bytes: 99726576
-Used memory in megabytes: 95
-7:7:22
-temp=53.8'C
-Used memory in bytes: 112564448
-Used memory in megabytes: 107
-7:9:12
-7:11:2
-temp=54.3'C
-Used memory in bytes: 108629744
-Used memory in megabytes: 103
-7:12:52
-7:14:42
-temp=53.2'C
-Used memory in bytes: 108901600
-Used memory in megabytes: 103
-7:16:34
-temp=51.6'C
-Used memory in bytes: 109185776
-Used memory in megabytes: 104
-7:18:24
-7:20:14
-temp=51.0'C
-Used memory in bytes: 92688608
-Used memory in megabytes: 88
-7:22:4
-7:23:54
-temp=53.8'C
-Used memory in bytes: 92958432
-Used memory in megabytes: 88
-7:25:44
-temp=53.8'C
-Used memory in bytes: 97418464
-Used memory in megabytes: 92
-7:27:34
-7:29:24
-temp=51.6'C
-Used memory in bytes: 101875936
+1:10:22
+temp=46.6'C
+Used memory in bytes: 69609488
+Used memory in megabytes: 66
+1:12:15
+1:14:6
+temp=47.2'C
+Used memory in bytes: 78240784
+Used memory in megabytes: 74
+1:15:57
+1:17:47
+temp=47.7'C
+Used memory in bytes: 78483984
+Used memory in megabytes: 74
+1:19:39
+temp=46.1'C
+Used memory in bytes: 91304352
+Used memory in megabytes: 87
+1:21:30
+1:23:21
+temp=46.6'C
+Used memory in bytes: 70584224
+Used memory in megabytes: 67
+1:25:11
+temp=47.7'C
+Used memory in bytes: 62438816
+Used memory in megabytes: 59
+1:27:2
+1:28:53
+temp=47.2'C
+Used memory in bytes: 83653712
+Used memory in megabytes: 79
+1:30:43
+1:32:33
+temp=47.2'C
+Used memory in bytes: 88089104
+Used memory in megabytes: 84
+1:34:27
+temp=46.6'C
+Used memory in bytes: 63171088
+Used memory in megabytes: 60
+1:36:17
+1:38:8
+temp=47.2'C
+Used memory in bytes: 81229216
+Used memory in megabytes: 77
+1:39:59
+1:41:58
+temp=46.6'C
+Used memory in bytes: 72032784
+Used memory in megabytes: 68
+1:43:50
+temp=46.6'C
+Used memory in bytes: 63886864
+Used memory in megabytes: 60
+1:45:41
+1:47:31
+temp=45.5'C
+Used memory in bytes: 101912416
 Used memory in megabytes: 97
-7:31:14
-temp=52.1'C
-Used memory in bytes: 107383024
-Used memory in megabytes: 102
-7:33:4
-7:34:54
-temp=53.8'C
-Used memory in bytes: 110798064
-Used memory in megabytes: 105
-7:36:44
-7:38:34
-temp=52.7'C
-Used memory in bytes: 115256048
-Used memory in megabytes: 109
-7:40:24
-temp=51.6'C
-Used memory in bytes: 98740432
-Used memory in megabytes: 94
-7:42:15
-7:44:5
-temp=52.7'C
-Used memory in bytes: 99012304
-Used memory in megabytes: 94
-7:45:55
-7:47:45
-temp=52.1'C
-Used memory in bytes: 99275984
-Used memory in megabytes: 94
-7:49:35
-temp=53.2'C
-Used memory in bytes: 99541712
-Used memory in megabytes: 94
-7:51:25
-7:53:15
-temp=54.9'C
-Used memory in bytes: 99805376
-Used memory in megabytes: 95
-7:55:5
-7:56:55
-temp=52.1'C
-Used memory in bytes: 100067008
-Used memory in megabytes: 95
-7:58:45
-temp=54.3'C
-Used memory in bytes: 96140480
-Used memory in megabytes: 91
-8:0:35
-8:2:25
-temp=52.7'C
-Used memory in bytes: 96421584
-Used memory in megabytes: 91
-8:4:15
-temp=54.3'C
-Used memory in bytes: 96681152
-Used memory in megabytes: 92
-8:6:5
-8:7:55
-temp=53.2'C
-Used memory in bytes: 109525712
-Used memory in megabytes: 104
-8:9:45
-8:11:35
-temp=53.8'C
-Used memory in bytes: 97218272
-Used memory in megabytes: 92
-8:13:28
-temp=53.2'C
-Used memory in bytes: 97473216
-Used memory in megabytes: 92
-8:15:24
-8:17:14
-temp=52.1'C
-Used memory in bytes: 106109120
-Used memory in megabytes: 101
-8:19:4
-8:20:54
-temp=52.7'C
-Used memory in bytes: 114781920
-Used memory in megabytes: 109
-8:22:44
-temp=54.3'C
-Used memory in bytes: 115064000
-Used memory in megabytes: 109
-8:24:34
-8:26:24
-temp=53.2'C
-Used memory in bytes: 112206688
-Used memory in megabytes: 107
-8:28:14
-temp=52.1'C
-Used memory in bytes: 137627984
-Used memory in megabytes: 131
-8:30:4
-8:31:54
-temp=54.9'C
-Used memory in bytes: 99092320
-Used memory in megabytes: 94
-8:33:44
-8:35:34
-temp=54.3'C
-Used memory in bytes: 133954912
-Used memory in megabytes: 127
-8:37:24
-temp=54.9'C
-Used memory in bytes: 130017120
-Used memory in megabytes: 123
-8:39:14
-8:41:4
-temp=55.4'C
-Used memory in bytes: 126078288
-Used memory in megabytes: 120
-8:42:54
-8:44:44
-temp=54.3'C
-Used memory in bytes: 130536288
-Used memory in megabytes: 124
-8:46:34
-temp=54.3'C
-Used memory in bytes: 126609232
-Used memory in megabytes: 120
-8:48:24
-8:50:14
-temp=55.4'C
-Used memory in bytes: 131053888
-Used memory in megabytes: 124
-8:52:4
-8:53:54
-temp=53.8'C
-Used memory in bytes: 100904784
-Used memory in megabytes: 96
-8:55:44
-temp=53.8'C
-Used memory in bytes: 106409264
-Used memory in megabytes: 101
-8:57:34
-8:59:24
-temp=54.9'C
-Used memory in bytes: 127644480
-Used memory in megabytes: 121
-9:1:14
-temp=54.9'C
-Used memory in bytes: 101708096
-Used memory in megabytes: 96
-9:3:4
-9:4:54
-temp=54.3'C
-Used memory in bytes: 119790928
-Used memory in megabytes: 114
-9:6:44
-9:8:35
-temp=54.9'C
-Used memory in bytes: 120056640
-Used memory in megabytes: 114
-9:10:25
-temp=55.4'C
-Used memory in bytes: 137095504
-Used memory in megabytes: 130
-9:12:15
-9:14:5
-temp=56.0'C
-Used memory in bytes: 116382528
-Used memory in megabytes: 110
-9:15:55
-9:17:45
-temp=54.3'C
-Used memory in bytes: 129225008
-Used memory in megabytes: 123
-9:19:35
-temp=55.4'C
-Used memory in bytes: 137868592
-Used memory in megabytes: 131
-9:21:25
-9:23:15
-temp=54.9'C
-Used memory in bytes: 112974160
-Used memory in megabytes: 107
-9:25:5
-9:26:55
-temp=53.8'C
-Used memory in bytes: 134204736
-Used memory in megabytes: 127
-9:28:45
-temp=54.9'C
-Used memory in bytes: 109290304
-Used memory in megabytes: 104
-9:30:35
-9:32:25
-temp=53.8'C
-Used memory in bytes: 126341440
-Used memory in megabytes: 120
-9:34:15
-temp=55.4'C
-Used memory in bytes: 104574768
+1:49:21
+temp=47.2'C
+Used memory in bytes: 89582944
+Used memory in megabytes: 85
+1:51:11
+1:53:1
+temp=47.2'C
+Used memory in bytes: 77259616
+Used memory in megabytes: 73
+1:54:51
+1:56:42
+temp=47.2'C
+Used memory in bytes: 81717600
+Used memory in megabytes: 77
+1:58:32
+temp=49.4'C
+Used memory in bytes: 94562144
+Used memory in megabytes: 90
+2:0:23
+2:2:13
+temp=46.1'C
+Used memory in bytes: 73856352
+Used memory in megabytes: 70
+2:4:3
+2:5:53
+temp=47.7'C
+Used memory in bytes: 103467872
+Used memory in megabytes: 98
+2:7:43
+temp=46.1'C
+Used memory in bytes: 91134304
+Used memory in megabytes: 86
+2:9:33
+2:11:23
+temp=47.2'C
+Used memory in bytes: 103961952
 Used memory in megabytes: 99
-9:36:5
-9:37:55
-temp=54.9'C
-Used memory in bytes: 122649360
-Used memory in megabytes: 116
-9:39:45
-9:41:35
-temp=53.8'C
-Used memory in bytes: 105085232
+2:13:13
+temp=47.2'C
+Used memory in bytes: 83243872
+Used memory in megabytes: 79
+2:15:3
+2:16:53
+temp=46.1'C
+Used memory in bytes: 100269392
+Used memory in megabytes: 95
+2:18:43
+2:20:33
+temp=47.2'C
+Used memory in bytes: 79555408
+Used memory in megabytes: 75
+2:22:24
+temp=47.2'C
+Used memory in bytes: 71435616
+Used memory in megabytes: 68
+2:24:14
+2:26:4
+temp=47.7'C
+Used memory in bytes: 101047120
+Used memory in megabytes: 96
+2:27:54
+2:29:44
+temp=47.2'C
+Used memory in bytes: 97114464
+Used memory in megabytes: 92
+2:31:34
+temp=47.2'C
+Used memory in bytes: 93167472
+Used memory in megabytes: 88
+2:33:24
+2:35:14
+temp=47.7'C
+Used memory in bytes: 85015872
+Used memory in megabytes: 81
+2:37:5
+2:38:56
+temp=47.7'C
+Used memory in bytes: 89453360
+Used memory in megabytes: 85
+2:40:47
+temp=47.2'C
+Used memory in bytes: 93903168
+Used memory in megabytes: 89
+2:42:38
+2:44:30
+temp=46.6'C
+Used memory in bytes: 77385536
+Used memory in megabytes: 73
+2:46:21
+temp=47.2'C
+Used memory in bytes: 73448256
+Used memory in megabytes: 70
+2:48:12
+2:50:3
+temp=46.6'C
+Used memory in bytes: 86288192
+Used memory in megabytes: 82
+2:51:54
+2:53:45
+temp=49.4'C
+Used memory in bytes: 73952064
+Used memory in megabytes: 70
+2:55:36
+temp=46.6'C
+Used memory in bytes: 74209600
+Used memory in megabytes: 70
+2:57:27
+2:59:18
+temp=47.7'C
+Used memory in bytes: 99624256
+Used memory in megabytes: 95
+3:1:9
+temp=45.5'C
+Used memory in bytes: 91493168
+Used memory in megabytes: 87
+3:3:0
+3:4:51
+temp=46.6'C
+Used memory in bytes: 104329024
+Used memory in megabytes: 99
+3:6:42
+3:8:32
+temp=47.2'C
+Used memory in bytes: 75232576
+Used memory in megabytes: 71
+3:10:24
+temp=46.6'C
+Used memory in bytes: 92267328
+Used memory in megabytes: 87
+3:12:14
+3:14:5
+temp=47.2'C
+Used memory in bytes: 75753808
+Used memory in megabytes: 72
+3:15:56
+3:17:47
+temp=46.6'C
+Used memory in bytes: 98029376
+Used memory in megabytes: 93
+3:19:38
+temp=46.6'C
+Used memory in bytes: 93035328
+Used memory in megabytes: 88
+3:21:29
+3:23:20
+temp=46.6'C
+Used memory in bytes: 105863472
 Used memory in megabytes: 100
-9:43:25
-temp=55.4'C
-Used memory in bytes: 135753520
-Used memory in megabytes: 129
-9:45:15
-9:47:5
-temp=53.8'C
-Used memory in bytes: 123430192
-Used memory in megabytes: 117
-9:48:55
-9:50:45
-temp=56.0'C
-Used memory in bytes: 111104288
-Used memory in megabytes: 105
-9:52:35
-temp=56.0'C
-Used memory in bytes: 123950368
-Used memory in megabytes: 118
-9:54:25
-9:56:15
-temp=54.9'C
-Used memory in bytes: 132596512
-Used memory in megabytes: 126
-9:58:3
-temp=54.3'C
-Used memory in bytes: 106639648
-Used memory in megabytes: 101
-10:0:2
-10:1:52
-temp=54.9'C
-Used memory in bytes: 116338464
+3:25:11
+temp=48.3'C
+Used memory in bytes: 97738512
+Used memory in megabytes: 93
+3:27:1
+3:28:51
+temp=46.6'C
+Used memory in bytes: 89666848
+Used memory in megabytes: 85
+3:30:42
+3:32:32
+temp=47.7'C
+Used memory in bytes: 77337376
+Used memory in megabytes: 73
+3:34:22
+temp=47.2'C
+Used memory in bytes: 81787168
+Used memory in megabytes: 77
+3:36:13
+3:38:3
+temp=47.7'C
+Used memory in bytes: 90420512
+Used memory in megabytes: 86
+3:39:58
+3:41:49
+temp=47.7'C
+Used memory in bytes: 99065120
+Used memory in megabytes: 94
+3:43:39
+temp=49.4'C
+Used memory in bytes: 95118112
+Used memory in megabytes: 90
+3:45:29
+3:47:20
+temp=47.7'C
+Used memory in bytes: 86976304
+Used memory in megabytes: 82
+3:49:10
+temp=46.1'C
+Used memory in bytes: 91409712
+Used memory in megabytes: 87
+3:51:1
+3:52:51
+temp=47.2'C
+Used memory in bytes: 91667232
+Used memory in megabytes: 87
+3:54:42
+3:56:32
+temp=47.2'C
+Used memory in bytes: 75137296
+Used memory in megabytes: 71
+3:58:23
+temp=47.2'C
+Used memory in bytes: 75386656
+Used memory in megabytes: 71
+4:0:13
+4:2:3
+temp=47.2'C
+Used memory in bytes: 92415264
+Used memory in megabytes: 88
+4:3:54
+4:5:44
+temp=47.7'C
+Used memory in bytes: 75889456
+Used memory in megabytes: 72
+4:7:35
+temp=47.7'C
+Used memory in bytes: 76142880
+Used memory in megabytes: 72
+4:9:25
+4:11:16
+temp=47.7'C
+Used memory in bytes: 80595232
+Used memory in megabytes: 76
+4:13:7
+4:14:57
+temp=47.7'C
+Used memory in bytes: 76654336
+Used memory in megabytes: 73
+4:16:48
+temp=47.2'C
+Used memory in bytes: 89509136
+Used memory in megabytes: 85
+4:18:38
+4:20:29
+temp=47.7'C
+Used memory in bytes: 89760528
+Used memory in megabytes: 85
+4:22:19
+temp=46.6'C
+Used memory in bytes: 81635584
+Used memory in megabytes: 77
+4:24:10
+4:26:1
+temp=46.6'C
+Used memory in bytes: 98672384
+Used memory in megabytes: 94
+4:27:51
+4:29:42
+temp=47.7'C
+Used memory in bytes: 90549504
+Used memory in megabytes: 86
+4:31:32
+temp=47.2'C
+Used memory in bytes: 86627072
+Used memory in megabytes: 82
+4:33:23
+4:35:13
+temp=46.1'C
+Used memory in bytes: 95266064
+Used memory in megabytes: 90
+4:37:4
+4:38:54
+temp=47.7'C
+Used memory in bytes: 91329296
+Used memory in megabytes: 87
+4:40:45
+temp=48.8'C
+Used memory in bytes: 79005936
+Used memory in megabytes: 75
+4:42:36
+4:44:26
+temp=48.3'C
+Used memory in bytes: 87652096
+Used memory in megabytes: 83
+4:46:17
+temp=47.2'C
+Used memory in bytes: 104682752
+Used memory in megabytes: 99
+4:48:7
+4:49:58
+temp=47.2'C
+Used memory in bytes: 79781120
+Used memory in megabytes: 76
+4:51:48
+4:53:39
+temp=45.5'C
+Used memory in bytes: 84245248
+Used memory in megabytes: 80
+4:55:29
+temp=47.2'C
+Used memory in bytes: 88697088
+Used memory in megabytes: 84
+4:57:20
+4:59:10
+temp=47.2'C
+Used memory in bytes: 80568064
+Used memory in megabytes: 76
+5:1:1
+5:2:51
+temp=48.8'C
+Used memory in bytes: 101803232
+Used memory in megabytes: 97
+5:4:42
+temp=46.6'C
+Used memory in bytes: 81107696
+Used memory in megabytes: 77
+5:6:32
+5:8:23
+temp=47.2'C
+Used memory in bytes: 89762016
+Used memory in megabytes: 85
+5:10:13
+temp=46.1'C
+Used memory in bytes: 85832928
+Used memory in megabytes: 81
+5:12:4
+5:13:54
+temp=47.2'C
+Used memory in bytes: 98688752
+Used memory in megabytes: 94
+5:15:45
+5:17:36
+temp=47.2'C
+Used memory in bytes: 94754016
+Used memory in megabytes: 90
+5:19:26
+temp=46.6'C
+Used memory in bytes: 86634736
+Used memory in megabytes: 82
+5:21:17
+5:23:7
+temp=47.7'C
+Used memory in bytes: 86908640
+Used memory in megabytes: 82
+5:24:58
+5:26:48
+temp=47.7'C
+Used memory in bytes: 82985200
+Used memory in megabytes: 79
+5:28:39
+temp=46.6'C
+Used memory in bytes: 87439072
+Used memory in megabytes: 83
+5:30:29
+5:32:20
+temp=47.7'C
+Used memory in bytes: 87700720
+Used memory in megabytes: 83
+5:34:10
+temp=46.1'C
+Used memory in bytes: 92154592
+Used memory in megabytes: 87
+5:36:1
+5:37:51
+temp=47.7'C
+Used memory in bytes: 92434672
+Used memory in megabytes: 88
+5:39:41
+5:41:32
+temp=48.3'C
+Used memory in bytes: 84307680
+Used memory in megabytes: 80
+5:43:22
+temp=47.2'C
+Used memory in bytes: 84579568
+Used memory in megabytes: 80
+5:45:13
+5:47:3
+temp=49.4'C
+Used memory in bytes: 93238000
+Used memory in megabytes: 88
+5:48:55
+5:50:46
+temp=47.2'C
+Used memory in bytes: 119702880
+Used memory in megabytes: 114
+5:52:37
+temp=47.2'C
+Used memory in bytes: 115757936
 Used memory in megabytes: 110
-10:3:42
-10:5:32
-temp=55.4'C
-Used memory in bytes: 137563936
-Used memory in megabytes: 131
-10:7:22
-temp=56.5'C
-Used memory in bytes: 112659744
-Used memory in megabytes: 107
-10:9:12
-10:11:2
-temp=56.0'C
-Used memory in bytes: 138085152
-Used memory in megabytes: 131
-10:12:52
-10:14:42
-temp=56.0'C
-Used memory in bytes: 125757728
-Used memory in megabytes: 119
-10:16:32
-temp=54.3'C
-Used memory in bytes: 130211120
-Used memory in megabytes: 124
-10:18:22
-10:20:12
-temp=55.4'C
-Used memory in bytes: 138859296
-Used memory in megabytes: 132
-10:22:2
-10:23:52
-temp=56.5'C
-Used memory in bytes: 122345776
+5:54:28
+5:56:18
+temp=47.7'C
+Used memory in bytes: 120189280
+Used memory in megabytes: 114
+5:58:9
+5:59:59
+temp=46.6'C
+Used memory in bytes: 116236128
+Used memory in megabytes: 110
+6:1:50
+temp=48.8'C
+Used memory in bytes: 86073696
+Used memory in megabytes: 82
+6:3:40
+6:5:31
+temp=47.2'C
+Used memory in bytes: 108343136
+Used memory in megabytes: 103
+6:7:22
+temp=48.3'C
+Used memory in bytes: 108586336
+Used memory in megabytes: 103
+6:9:12
+6:11:3
+temp=46.1'C
+Used memory in bytes: 86809440
+Used memory in megabytes: 82
+6:12:54
+6:14:44
+temp=48.3'C
+Used memory in bytes: 121657696
 Used memory in megabytes: 116
-10:25:43
-temp=54.9'C
-Used memory in bytes: 135179552
-Used memory in megabytes: 128
-10:27:33
-10:29:23
-temp=56.5'C
-Used memory in bytes: 109229328
+6:16:35
+temp=46.6'C
+Used memory in bytes: 109317968
 Used memory in megabytes: 104
-10:31:13
-temp=53.8'C
-Used memory in bytes: 123110128
-Used memory in megabytes: 117
-10:33:3
-10:34:53
-temp=55.4'C
-Used memory in bytes: 109748464
-Used memory in megabytes: 104
-10:36:43
-10:38:33
-temp=56.0'C
-Used memory in bytes: 136219888
-Used memory in megabytes: 129
-10:40:23
-temp=55.4'C
-Used memory in bytes: 136495888
-Used memory in megabytes: 130
-10:42:13
-10:44:3
-temp=55.4'C
-Used memory in bytes: 124180736
-Used memory in megabytes: 118
-10:45:53
-10:47:43
-temp=55.4'C
-Used memory in bytes: 116045568
-Used memory in megabytes: 110
-10:49:33
-temp=54.3'C
-Used memory in bytes: 128898304
-Used memory in megabytes: 122
-10:51:23
-10:53:13
-temp=55.4'C
-Used memory in bytes: 137561856
-Used memory in megabytes: 131
-10:55:3
-10:56:53
-temp=56.0'C
-Used memory in bytes: 111611152
-Used memory in megabytes: 106
-10:58:43
-temp=55.4'C
-Used memory in bytes: 117117696
-Used memory in megabytes: 111
-11:0:33
-11:2:23
-temp=55.4'C
-Used memory in bytes: 125759760
-Used memory in megabytes: 119
-11:4:13
-temp=54.9'C
-Used memory in bytes: 126025472
-Used memory in megabytes: 120
-11:6:3
-11:7:53
-temp=54.9'C
-Used memory in bytes: 130489616
-Used memory in megabytes: 124
-11:9:43
-11:11:33
-temp=55.4'C
-Used memory in bytes: 130757376
-Used memory in megabytes: 124
-11:13:23
-temp=54.3'C
-Used memory in bytes: 131010304
-Used memory in megabytes: 124
-11:15:13
-11:17:3
-temp=55.4'C
-Used memory in bytes: 118680800
+6:18:25
+6:20:16
+temp=46.6'C
+Used memory in bytes: 105370960
+Used memory in megabytes: 100
+6:22:6
+6:23:56
+temp=47.2'C
+Used memory in bytes: 97233264
+Used memory in megabytes: 92
+6:25:46
+temp=47.2'C
+Used memory in bytes: 122649440
+Used memory in megabytes: 116
+6:27:36
+6:29:26
+temp=47.7'C
+Used memory in bytes: 118706016
 Used memory in megabytes: 113
-11:18:54
-11:20:44
-temp=55.4'C
-Used memory in bytes: 135721184
-Used memory in megabytes: 129
-11:22:34
-temp=55.4'C
-Used memory in bytes: 113964784
-Used memory in megabytes: 108
-11:24:24
-11:26:14
-temp=54.3'C
-Used memory in bytes: 123661552
-Used memory in megabytes: 117
-11:28:4
-11:29:54
-temp=54.9'C
-Used memory in bytes: 123928800
-Used memory in megabytes: 118
-11:31:44
-temp=54.3'C
-Used memory in bytes: 120006384
+6:31:16
+temp=47.7'C
+Used memory in bytes: 114763088
+Used memory in megabytes: 109
+6:33:6
+6:34:56
+temp=47.7'C
+Used memory in bytes: 110822240
+Used memory in megabytes: 105
+6:36:46
+6:38:36
+temp=47.2'C
+Used memory in bytes: 94294352
+Used memory in megabytes: 89
+6:40:27
+temp=47.2'C
+Used memory in bytes: 102935360
+Used memory in megabytes: 98
+6:42:18
+6:44:9
+temp=46.6'C
+Used memory in bytes: 119966016
 Used memory in megabytes: 114
-11:33:34
-11:35:24
-temp=56.0'C
-Used memory in bytes: 115033328
-Used memory in megabytes: 109
-11:37:14
-temp=56.0'C
-Used memory in bytes: 115310320
-Used memory in megabytes: 109
-11:39:4
-11:40:54
-temp=54.9'C
-Used memory in bytes: 120818912
-Used memory in megabytes: 115
-11:42:44
-11:44:34
-temp=56.0'C
-Used memory in bytes: 121084656
-Used memory in megabytes: 115
-11:46:24
-temp=56.5'C
-Used memory in bytes: 125546720
+6:46:0
+6:47:52
+temp=47.7'C
+Used memory in bytes: 89810752
+Used memory in megabytes: 85
+6:49:43
+temp=46.6'C
+Used memory in bytes: 112078144
+Used memory in megabytes: 106
+6:51:34
+6:53:25
+temp=48.8'C
+Used memory in bytes: 99880752
+Used memory in megabytes: 95
+6:55:16
+temp=46.1'C
+Used memory in bytes: 112719168
+Used memory in megabytes: 107
+6:57:8
+6:58:59
+temp=47.7'C
+Used memory in bytes: 117162288
+Used memory in megabytes: 111
+7:0:50
+7:2:42
+temp=47.2'C
+Used memory in bytes: 125796656
 Used memory in megabytes: 119
-11:48:14
-11:50:4
-temp=54.3'C
-Used memory in bytes: 116375280
-Used memory in megabytes: 110
-11:51:54
-11:53:44
-temp=56.0'C
-Used memory in bytes: 134454496
-Used memory in megabytes: 128
-11:55:34
-temp=54.9'C
-Used memory in bytes: 138903792
-Used memory in megabytes: 132
-11:57:24
-11:59:14
-temp=54.9'C
-Used memory in bytes: 134969056
-Used memory in megabytes: 128
-12:1:4
-12:2:54
-temp=56.0'C
-Used memory in bytes: 131034832
-Used memory in megabytes: 124
-12:4:44
-temp=54.3'C
-Used memory in bytes: 131323088
-Used memory in megabytes: 125
-12:6:34
-12:8:24
-temp=54.9'C
-Used memory in bytes: 117975760
+7:4:33
+temp=48.3'C
+Used memory in bytes: 100882240
+Used memory in megabytes: 96
+7:6:24
+7:8:16
+temp=47.7'C
+Used memory in bytes: 117921088
 Used memory in megabytes: 112
-12:10:14
-temp=56.0'C
-Used memory in bytes: 136071872
-Used memory in megabytes: 129
-12:12:4
-12:13:54
-temp=54.9'C
-Used memory in bytes: 132158672
-Used memory in megabytes: 126
-12:15:44
-12:17:34
-temp=54.3'C
-Used memory in bytes: 132421840
-Used memory in megabytes: 126
-12:19:24
-temp=56.5'C
-Used memory in bytes: 128499408
-Used memory in megabytes: 122
-12:21:14
-12:23:4
-temp=54.3'C
-Used memory in bytes: 128775392
-Used memory in megabytes: 122
-12:24:54
-12:26:44
-temp=54.3'C
-Used memory in bytes: 137427648
-Used memory in megabytes: 131
-12:28:34
-temp=56.0'C
-Used memory in bytes: 129323216
-Used memory in megabytes: 123
-12:30:24
-12:32:14
-temp=55.4'C
-Used memory in bytes: 125398208
-Used memory in megabytes: 119
-12:34:4
-12:35:54
-temp=55.4'C
-Used memory in bytes: 120430800
+7:10:7
+7:11:59
+temp=47.2'C
+Used memory in bytes: 118176592
+Used memory in megabytes: 112
+7:13:50
+temp=48.3'C
+Used memory in bytes: 97460544
+Used memory in megabytes: 92
+7:15:41
+7:17:32
+temp=47.2'C
+Used memory in bytes: 106103616
+Used memory in megabytes: 101
+7:19:24
+temp=47.7'C
+Used memory in bytes: 110545200
+Used memory in megabytes: 105
+7:21:15
+7:23:7
+temp=47.2'C
+Used memory in bytes: 102408000
+Used memory in megabytes: 97
+7:24:58
+7:26:49
+temp=47.7'C
+Used memory in bytes: 111045952
+Used memory in megabytes: 105
+7:28:40
+temp=46.6'C
+Used memory in bytes: 102909216
+Used memory in megabytes: 98
+7:30:31
+7:32:22
+temp=48.3'C
+Used memory in bytes: 111559456
+Used memory in megabytes: 106
+7:34:12
+temp=47.7'C
+Used memory in bytes: 116010784
+Used memory in megabytes: 110
+7:36:3
+7:37:54
+temp=48.3'C
+Used memory in bytes: 94242064
+Used memory in megabytes: 89
+7:39:44
+7:41:35
+temp=46.6'C
+Used memory in bytes: 108137760
+Used memory in megabytes: 103
+7:43:26
+temp=46.6'C
+Used memory in bytes: 120970016
+Used memory in megabytes: 115
+7:45:17
+7:47:7
+temp=49.4'C
+Used memory in bytes: 104440096
+Used memory in megabytes: 99
+7:48:58
+7:50:49
+temp=48.3'C
+Used memory in bytes: 108893968
+Used memory in megabytes: 103
+7:52:40
+temp=47.7'C
+Used memory in bytes: 113339680
+Used memory in megabytes: 108
+7:54:31
+7:56:21
+temp=47.7'C
+Used memory in bytes: 101004064
+Used memory in megabytes: 96
+7:58:12
+temp=47.2'C
+Used memory in bytes: 109646112
+Used memory in megabytes: 104
+8:0:3
+8:1:53
+temp=48.8'C
+Used memory in bytes: 109899024
+Used memory in megabytes: 104
+8:3:44
+8:5:35
+temp=48.8'C
+Used memory in bytes: 101766944
+Used memory in megabytes: 97
+8:7:26
+temp=47.7'C
+Used memory in bytes: 106212640
+Used memory in megabytes: 101
+8:9:16
+8:11:7
+temp=47.2'C
+Used memory in bytes: 110658336
+Used memory in megabytes: 105
+8:12:58
+8:14:49
+temp=47.7'C
+Used memory in bytes: 119297824
+Used memory in megabytes: 113
+8:16:40
+temp=47.2'C
+Used memory in bytes: 123743488
+Used memory in megabytes: 118
+8:18:30
+8:20:21
+temp=46.6'C
+Used memory in bytes: 97790736
+Used memory in megabytes: 93
+8:22:12
+temp=47.7'C
+Used memory in bytes: 98046208
+Used memory in megabytes: 93
+8:24:3
+8:25:54
+temp=47.7'C
+Used memory in bytes: 120317696
 Used memory in megabytes: 114
-12:37:44
-temp=54.9'C
-Used memory in bytes: 125939408
-Used memory in megabytes: 120
-12:39:34
-12:41:24
-temp=55.4'C
-Used memory in bytes: 122006752
+8:27:46
+8:29:37
+temp=47.2'C
+Used memory in bytes: 107990784
+Used memory in megabytes: 102
+8:31:28
+temp=46.6'C
+Used memory in bytes: 125035792
+Used memory in megabytes: 119
+8:33:19
+8:35:10
+temp=48.3'C
+Used memory in bytes: 121103120
+Used memory in megabytes: 115
+8:37:0
+8:38:51
+temp=46.6'C
+Used memory in bytes: 117172480
+Used memory in megabytes: 111
+8:40:42
+temp=48.3'C
+Used memory in bytes: 113236752
+Used memory in megabytes: 107
+8:42:33
+8:44:24
+temp=47.7'C
+Used memory in bytes: 99858688
+Used memory in megabytes: 95
+8:46:15
+temp=48.3'C
+Used memory in bytes: 100118272
+Used memory in megabytes: 95
+8:48:6
+8:49:57
+temp=48.8'C
+Used memory in bytes: 105613568
+Used memory in megabytes: 100
+8:51:48
+8:53:39
+temp=48.3'C
+Used memory in bytes: 122649856
 Used memory in megabytes: 116
-12:43:14
-temp=54.9'C
-Used memory in bytes: 139049680
-Used memory in megabytes: 132
-12:45:4
-12:46:54
-temp=55.4'C
-Used memory in bytes: 126746816
-Used memory in megabytes: 120
-12:48:44
-12:50:35
-temp=54.3'C
-Used memory in bytes: 135397552
-Used memory in megabytes: 129
-12:52:25
-temp=56.0'C
-Used memory in bytes: 131460784
-Used memory in megabytes: 125
-12:54:15
-12:56:5
-temp=56.5'C
-Used memory in bytes: 127532208
-Used memory in megabytes: 121
-12:57:55
-12:59:45
-temp=54.9'C
-Used memory in bytes: 127810224
-Used memory in megabytes: 121
-13:1:35
-temp=55.4'C
-Used memory in bytes: 128078000
-Used memory in megabytes: 122
-13:3:26
-13:5:16
-temp=54.9'C
-Used memory in bytes: 161911312
-Used memory in megabytes: 154
-13:7:6
-13:8:56
-temp=55.4'C
-Used memory in bytes: 166346032
-Used memory in megabytes: 158
-FATAL ERROR in native method: Nativewindow X11 IOError: Display 0x7fff280015e0 (:0): Resource temporarily unavailable
-	at jogamp.newt.driver.x11.DisplayDriver.DispatchMessages0(Native Method)
-	at jogamp.newt.driver.x11.DisplayDriver.dispatchMessagesNative(DisplayDriver.java:112)
-	at jogamp.newt.DisplayImpl.dispatchMessages(DisplayImpl.java:753)
-	at jogamp.newt.DisplayImpl$7.run(DisplayImpl.java:672)
-	at jogamp.newt.DefaultEDTUtil$NEDT.run(DefaultEDTUtil.java:347)
+8:55:30
+temp=48.8'C
+Used memory in bytes: 106128128
+Used memory in megabytes: 101
+8:57:21
+8:59:11
+temp=47.7'C
+Used memory in bytes: 114784528
+Used memory in megabytes: 109
+9:1:3
+9:2:54
+temp=48.3'C
+Used memory in bytes: 119222000
+Used memory in megabytes: 113
+9:4:45
+temp=46.6'C
+Used memory in bytes: 123683072
+Used memory in megabytes: 117
+9:6:36
+9:8:27
+temp=48.3'C
+Used memory in bytes: 115562208
+Used memory in megabytes: 110

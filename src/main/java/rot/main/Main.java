@@ -103,18 +103,18 @@ public class Main extends PApplet {
                 }
             }
         }
+        if (frameCount % (int) frameRate == 0){
+            for (int i = 0; i < 5; i++) {
+                a.pixels[i] = 0xFFff2D00;
+            }
+        } else {
+            for (int i = 0; i < 5; i++) {
+                a.pixels[i] = 0xFF000000;
+            }
+        }
 
         a.updatePixels();
-
         //Performance Monitoring. Comment this out to Exhibit
-        textSize(10);
-        fill(255);
-        text("Uptime: " + Utils.uptime(), 40, 50);
-        text("Main Class", 40, 75);
-
-        if (frameCount % 3000 == 0) {
-            System.out.println(Utils.uptime());
-        }
     }
 
     //standard runSketch main method

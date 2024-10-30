@@ -52,7 +52,7 @@ public class Utils {
        if (sysInfo().contains("Silicon")) {
            p.command("echo", "$JAVA_HOME");
        } else if (sysInfo().contains("Pi")) {
-           p.command("sudo", "vcgencmd", "measure_temp");
+           p.command("temp");
        }
         p.redirectErrorStream(true);
         Process pr = p.start();
