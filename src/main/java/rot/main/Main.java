@@ -103,7 +103,7 @@ public class Main extends PApplet {
                 }
             }
         }
-        if (frameCount % (int) frameRate == 0){
+        if (frameCount % 30 == 0){
             for (int i = 0; i < 5; i++) {
                 a.pixels[i] = 0xFFff2D00;
             }
