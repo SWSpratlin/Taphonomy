@@ -118,8 +118,8 @@ public class Main extends PApplet {
         }
 
         a.updatePixels();
-        textSize(50);
-        text(a.pixels[rmouseX + (rmouseY * rwidth)], 40, 40);
+        //textSize(50);
+        //text(a.pixels[rmouseX + (rmouseY * rwidth)], 40, 40);
         //Performance Monitoring. Comment this out to Exhibit
     }
 
