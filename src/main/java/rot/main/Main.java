@@ -81,9 +81,9 @@ public class Main extends PApplet {
         image(bg, 0, 0);
 
         //Grow on a set interval.
-//        if (frameCount % d == 0) {
-//            rot.grow();
-//        }
+        if (frameCount % d == 0) {
+            rot.grow();
+        }
 
         //Draw Black Image. Used for erasing/growing
         image(a, 0, 0);
@@ -92,19 +92,20 @@ public class Main extends PApplet {
         handler.camFlipper(temp);
 
         //Processed Video Stream
-//        for (int i = 0; i < max; i++) {
-//            if (Utils.osName.contains("linux")) {
-//                if (temp[i] > -133000) {
-//                    a.pixels[i] = 0x00000000;
-//                }
-//            } else if (Utils.osName.contains("mac")) {
-//                if (temp[i] == -1) {
-//                    a.pixels[i] = 0x00000000;
-//                }
-//            }
-//        }
+        for (int i = 0; i < max; i++) {
+            if (Utils.osName.contains("linux")) {
+                if (temp[i] > -100000 && temp[i] < -70000) {
+                    a.pixels[i] = 0x00000000;
+                }
+            } else if (Utils.osName.contains("mac")) {
+                if (temp[i] == -1) {
+                    a.pixels[i] = 0x00000000;
+                }
+            }
+        }
 
-        if (max >= 0) System.arraycopy(temp, 0, a.pixels, 0, max);
+        //Raw Video Stream for Calibration
+        //if (max >= 0) System.arraycopy(temp, 0, a.pixels, 0, max);
 
         if (frameCount % 30 == 0){
             for (int i = 0; i < 5; i++) {
